@@ -36,11 +36,11 @@
   <meta name="twitter:creator"     content="@nextcvapp" />
 
   <!-- ═══ Favicon & Web App Manifest ═══ -->
-  <link rel="icon"             href="/favicon.ico" sizes="any" />
-  <link rel="icon"             href="/favicon-16x16.png" type="image/png" sizes="16x16" />
-  <link rel="icon"             href="/favicon-32x32.png" type="image/png" sizes="32x32" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest"         href="/site.webmanifest" />
+  <link rel="icon"             href="favicon.ico" sizes="any" />
+  <link rel="icon"             href="assets/images/favicon-16x16.png" type="image/png" sizes="16x16" />
+  <link rel="icon"             href="assets/images/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest"         href="site.webmanifest" />
 
   <!-- ═══ Structured Data – Organization ═══ -->
   <script type="application/ld+json">
@@ -171,7 +171,7 @@
   </script>
 
   <!-- ═══ Preload critical assets ═══ -->
-  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="assets/css/style.css" as="style" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
@@ -182,7 +182,7 @@
   <!-- ═══ Font Awesome ═══ -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
@@ -190,7 +190,7 @@
   <header class="header" id="header">
     <nav class="nav container">
       <a href="#home" class="nav__logo">
-        <span class="logo-icon"><i class="fa-solid fa-file-lines"></i></span>
+        <img src="./assets/images/logo/logo.png" alt="NextCV logo" class="logo-img" width="36" height="36" />
         Next<span class="logo-accent">CV</span>
       </a>
 
@@ -1265,7 +1265,7 @@
 
       <div class="footer-brand">
         <a href="#home" class="footer-logo">
-          <span class="logo-icon"><i class="fa-solid fa-file-lines"></i></span>
+          <img src="./assets/images/logo/logo.png" alt="NextCV logo" class="logo-img" width="36" height="36" />
           Next<span class="logo-accent">CV</span>
         </a>
         <p class="footer-tagline">Create Professional ATS-Friendly<br>Resumes in Minutes.</p>
@@ -1323,6 +1323,6 @@
     <i class="fa-solid fa-chevron-up"></i>
   </button>
 
-  <script src="script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
