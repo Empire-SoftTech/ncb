@@ -1090,6 +1090,45 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: var(--text-lt);
 }
 
+/* real-image phone frame */
+.slide-phone-img {
+  width: 220px;
+  background: #0F172A;
+  border-radius: 36px;
+  padding: 10px;
+  box-shadow:
+    0 30px 60px rgba(0,0,0,.35),
+    0 0 0 1.5px rgba(255,255,255,.12),
+    inset 0 0 0 2px #1E293B;
+  position: relative;
+}
+.slide-phone-img::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 52px;
+  height: 5px;
+  background: #1E293B;
+  border-radius: 0 0 6px 6px;
+  z-index: 2;
+}
+.slide-phone-frame {
+  border-radius: 26px;
+  overflow: hidden;
+  background: #000;
+  line-height: 0;
+  position: relative;
+}
+.slide-real-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 26px;
+}
+
 /* ── screen mocks (shared base) ── */
 .ss {
   padding: 10px 9px;
