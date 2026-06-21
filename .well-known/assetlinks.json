@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.empire.product.nexcv",
+    "sha256_cert_fingerprints": [
+      "9E:EB:73:64:F3:B3:42:7B:56:3B:1D:4D:9C:27:59:C5:51:FB:1F:BE:9C:B7:7C:E5:AA:2E:FF:99:B1:2B:EA:97"
+    ]
+  }
+}]
