@@ -1,0 +1,613 @@
+/* ═══════════════════════════════════════════════════════
+   ATS Score Explainer — ats-score.css
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Hero ──────────────────────────────────────────────── */
+.ats-hero {
+  background: linear-gradient(135deg, #0c1445 0%, #1a237e 45%, #004AC6 75%, #2563EB 100%);
+  padding: 100px 0 64px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.ats-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.ats-hero-inner { position: relative; z-index: 1; }
+.ats-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.92);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 24px;
+  letter-spacing: 0.3px;
+}
+.ats-hero h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+.ats-hero h1 span { color: #60A5FA; }
+.ats-hero p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.75);
+  max-width: 620px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+.ats-hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+.ats-hero-chips span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.88);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 7px 16px;
+  border-radius: 999px;
+}
+.ats-hero-chips span i { color: #93C5FD; }
+
+/* ── Breadcrumb ────────────────────────────────────────── */
+.ats-breadcrumb {
+  background: #f8f9ff;
+  border-bottom: 1px solid #e2e5f0;
+  padding: 14px 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+.ats-breadcrumb a { color: #004AC6; text-decoration: none; }
+.ats-breadcrumb a:hover { text-decoration: underline; }
+.ats-breadcrumb span { margin: 0 8px; }
+
+/* ── Main layout ───────────────────────────────────────── */
+.ats-body { background: #faf8ff; padding: 64px 0 80px; }
+.ats-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ── Section title ─────────────────────────────────────── */
+.ats-section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #131B2E;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ats-section-title i { color: #004AC6; font-size: 20px; }
+.ats-section-subtitle {
+  font-size: 15px;
+  color: #434655;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+/* ── Score meter / gauge visual ───────────────────────── */
+.ats-gauge-section {
+  background: #fff;
+  border: 1px solid #e0e3f0;
+  border-radius: 20px;
+  padding: 36px;
+  margin-bottom: 36px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,74,198,0.06);
+}
+.ats-gauge-track {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background: #eaedff;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 24px 0 16px;
+}
+.ats-gauge-bands {
+  display: flex;
+  height: 100%;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.ats-band {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.3px;
+}
+.ats-band-poor      { width: 40%; background: #ef4444; }
+.ats-band-average   { width: 20%; background: #f97316; }
+.ats-band-good      { width: 20%; background: #eab308; }
+.ats-band-excellent { width: 20%; background: #22c55e; }
+
+.ats-band-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  padding: 0 2px;
+}
+.ats-band-labels .poor      { color: #ef4444; }
+.ats-band-labels .average   { color: #f97316; }
+.ats-band-labels .good      { color: #ca8a04; }
+.ats-band-labels .excellent { color: #16a34a; }
+
+.ats-score-levels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+.ats-level-card {
+  padding: 16px 12px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1.5px solid transparent;
+}
+.ats-level-card .level-score {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.ats-level-card .level-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+.ats-level-card .level-desc {
+  font-size: 11px;
+  line-height: 1.5;
+  color: #555;
+}
+.ats-level-poor      { background: #fef2f2; border-color: #fca5a5; }
+.ats-level-poor      .level-score { color: #dc2626; }
+.ats-level-poor      .level-label { color: #dc2626; }
+.ats-level-average   { background: #fff7ed; border-color: #fdba74; }
+.ats-level-average   .level-score { color: #ea580c; }
+.ats-level-average   .level-label { color: #ea580c; }
+.ats-level-good      { background: #fefce8; border-color: #fde047; }
+.ats-level-good      .level-score { color: #ca8a04; }
+.ats-level-good      .level-label { color: #ca8a04; }
+.ats-level-excellent { background: #f0fdf4; border-color: #86efac; }
+.ats-level-excellent .level-score { color: #16a34a; }
+.ats-level-excellent .level-label { color: #16a34a; }
+
+/* ── Weight chart ──────────────────────────────────────── */
+.ats-weights-section {
+  background: #fff;
+  border: 1px solid #e0e3f0;
+  border-radius: 20px;
+  padding: 36px;
+  margin-bottom: 36px;
+  box-shadow: 0 4px 20px rgba(0,74,198,0.06);
+}
+.ats-weights-list { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+.ats-weight-row { display: flex; align-items: center; gap: 12px; }
+.ats-weight-icon {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+.ats-weight-name {
+  width: 148px;
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #131B2E;
+}
+.ats-weight-bar-wrap {
+  flex: 1;
+  background: #eaedff;
+  border-radius: 999px;
+  height: 10px;
+  overflow: hidden;
+}
+.ats-weight-bar {
+  height: 100%;
+  border-radius: 999px;
+}
+.ats-weight-pct {
+  width: 38px;
+  text-align: right;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* Section color palette */
+.w-experience  .ats-weight-icon { background: #dbeafe; color: #1d4ed8; }
+.w-experience  .ats-weight-bar  { background: #2563EB; }
+.w-experience  .ats-weight-pct  { color: #2563EB; }
+.w-skills      .ats-weight-icon { background: #ede9fe; color: #7c3aed; }
+.w-skills      .ats-weight-bar  { background: #7c3aed; }
+.w-skills      .ats-weight-pct  { color: #7c3aed; }
+.w-summary     .ats-weight-icon { background: #d1fae5; color: #059669; }
+.w-summary     .ats-weight-bar  { background: #059669; }
+.w-summary     .ats-weight-pct  { color: #059669; }
+.w-personal    .ats-weight-icon { background: #fef3c7; color: #d97706; }
+.w-personal    .ats-weight-bar  { background: #f59e0b; }
+.w-personal    .ats-weight-pct  { color: #d97706; }
+.w-education   .ats-weight-icon { background: #fce7f3; color: #db2777; }
+.w-education   .ats-weight-bar  { background: #ec4899; }
+.w-education   .ats-weight-pct  { color: #db2777; }
+.w-projects    .ats-weight-icon { background: #ccfbf1; color: #0d9488; }
+.w-projects    .ats-weight-bar  { background: #14b8a6; }
+.w-projects    .ats-weight-pct  { color: #0d9488; }
+.w-certs       .ats-weight-icon { background: #fee2e2; color: #dc2626; }
+.w-certs       .ats-weight-bar  { background: #ef4444; }
+.w-certs       .ats-weight-pct  { color: #dc2626; }
+
+/* ── Section cards ─────────────────────────────────────── */
+.ats-sections-grid { display: flex; flex-direction: column; gap: 24px; }
+.ats-section-card {
+  background: #fff;
+  border: 1px solid #e0e3f0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,74,198,0.05);
+  transition: box-shadow 0.2s;
+}
+.ats-section-card:hover { box-shadow: 0 8px 32px rgba(0,74,198,0.10); }
+
+.ats-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 28px;
+  border-bottom: 1px solid #eaedff;
+  cursor: pointer;
+  user-select: none;
+}
+.ats-card-icon {
+  width: 46px; height: 46px;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.ats-card-title-wrap { flex: 1; }
+.ats-card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #131B2E;
+  margin-bottom: 2px;
+}
+.ats-card-subtitle { font-size: 13px; color: #6b7280; }
+.ats-card-weight-badge {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+.ats-card-chevron {
+  color: #9ca3af;
+  font-size: 13px;
+  margin-left: 8px;
+  transition: transform 0.25s;
+  flex-shrink: 0;
+}
+.ats-section-card.open .ats-card-chevron { transform: rotate(180deg); }
+
+.ats-card-body {
+  display: none;
+  padding: 24px 28px 28px;
+}
+.ats-section-card.open .ats-card-body { display: block; }
+
+/* section-specific colors */
+.s-experience .ats-card-icon        { background: #dbeafe; color: #1d4ed8; }
+.s-experience .ats-card-weight-badge { background: #dbeafe; color: #1d4ed8; }
+.s-skills     .ats-card-icon        { background: #ede9fe; color: #7c3aed; }
+.s-skills     .ats-card-weight-badge { background: #ede9fe; color: #7c3aed; }
+.s-summary    .ats-card-icon        { background: #d1fae5; color: #059669; }
+.s-summary    .ats-card-weight-badge { background: #d1fae5; color: #059669; }
+.s-personal   .ats-card-icon        { background: #fef3c7; color: #d97706; }
+.s-personal   .ats-card-weight-badge { background: #fef3c7; color: #d97706; }
+.s-education  .ats-card-icon        { background: #fce7f3; color: #db2777; }
+.s-education  .ats-card-weight-badge { background: #fce7f3; color: #db2777; }
+.s-projects   .ats-card-icon        { background: #ccfbf1; color: #0d9488; }
+.s-projects   .ats-card-weight-badge { background: #ccfbf1; color: #0d9488; }
+.s-certs      .ats-card-icon        { background: #fee2e2; color: #dc2626; }
+.s-certs      .ats-card-weight-badge { background: #fee2e2; color: #dc2626; }
+
+/* card body content */
+.ats-card-desc {
+  font-size: 14px;
+  color: #434655;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.ats-criteria-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.ats-criteria-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.5;
+}
+.ats-criteria-list li i {
+  margin-top: 2px;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.ats-criteria-list li i.fa-check-circle { color: #16a34a; }
+.ats-criteria-list li i.fa-circle-dot   { color: #6b7280; }
+
+.ats-tip-box {
+  background: #f0f4ff;
+  border: 1px solid #c7d5f8;
+  border-left: 4px solid #004AC6;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #1e3a8a;
+  line-height: 1.6;
+}
+.ats-tip-box strong { color: #004AC6; }
+
+.ats-sub-scores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 16px 0;
+}
+.ats-sub-score-chip {
+  background: #f5f6fe;
+  border: 1px solid #e0e3f0;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+.ats-sub-score-chip .pts {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #004AC6;
+}
+.ats-sub-score-chip .pts small { font-size: 12px; color: #9ca3af; }
+.ats-sub-score-chip .pts-label { font-size: 11px; color: #6b7280; margin-top: 2px; }
+
+/* ── Sidebar ───────────────────────────────────────────── */
+.ats-sidebar { display: flex; flex-direction: column; gap: 20px; position: sticky; top: 88px; }
+
+.ats-sidebar-card {
+  background: #fff;
+  border: 1px solid #e0e3f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0,74,198,0.05);
+}
+.ats-sidebar-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #131B2E;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ats-sidebar-card h3 i { color: #004AC6; }
+
+/* CTA card */
+.ats-cta-card {
+  background: linear-gradient(135deg, #004AC6 0%, #4B41E1 100%);
+  border: none;
+  text-align: center;
+}
+.ats-cta-card h3 { color: #fff; justify-content: center; }
+.ats-cta-card h3 i { color: #93C5FD; }
+.ats-cta-card p { font-size: 13px; color: rgba(255,255,255,0.8); margin-bottom: 16px; line-height: 1.6; }
+.ats-cta-card .btn { width: 100%; justify-content: center; }
+
+/* Quick score guide */
+.score-guide-list { display: flex; flex-direction: column; gap: 10px; }
+.score-guide-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+.score-guide-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.score-guide-item .range { font-weight: 700; width: 52px; flex-shrink: 0; }
+.score-guide-item .desc  { color: #6b7280; flex: 1; }
+
+/* Checklist */
+.ats-checklist { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.ats-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.5;
+}
+.ats-checklist li i { color: #004AC6; margin-top: 2px; font-size: 12px; flex-shrink: 0; }
+
+/* ── How it works stepper ──────────────────────────────── */
+.ats-how-section {
+  background: #fff;
+  border: 1px solid #e0e3f0;
+  border-radius: 20px;
+  padding: 36px;
+  margin-bottom: 36px;
+  box-shadow: 0 4px 20px rgba(0,74,198,0.06);
+}
+.ats-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+  margin-top: 28px;
+}
+.ats-steps::before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: calc(12.5% + 4px);
+  right: calc(12.5% + 4px);
+  height: 2px;
+  background: linear-gradient(90deg, #004AC6, #4B41E1);
+  z-index: 0;
+}
+.ats-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 8px;
+  position: relative;
+  z-index: 1;
+}
+.ats-step-num {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #004AC6, #4B41E1);
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(0,74,198,0.3);
+}
+.ats-step-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #131B2E;
+  margin-bottom: 6px;
+}
+.ats-step-desc {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* ── Formula box ───────────────────────────────────────── */
+.ats-formula {
+  background: #f0f4ff;
+  border: 1.5px dashed #93c5fd;
+  border-radius: 14px;
+  padding: 20px 24px;
+  margin: 20px 0;
+  text-align: center;
+}
+.ats-formula p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e3a8a;
+  line-height: 1.8;
+}
+.ats-formula small {
+  font-size: 12px;
+  color: #6b7280;
+  display: block;
+  margin-top: 4px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── Bottom CTA banner ─────────────────────────────────── */
+.ats-cta-banner {
+  background: linear-gradient(135deg, #004AC6 0%, #2563EB 50%, #4B41E1 100%);
+  padding: 64px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.ats-cta-banner::before {
+  content: '';
+  position: absolute;
+  width: 500px; height: 500px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+  top: -200px; right: -100px;
+}
+.ats-cta-banner-inner { position: relative; z-index: 1; }
+.ats-cta-banner h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.ats-cta-banner p { font-size: 17px; color: rgba(255,255,255,0.75); margin-bottom: 28px; }
+.ats-cta-banner .cta-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .ats-grid { grid-template-columns: 1fr; }
+  .ats-sidebar { position: static; flex-direction: row; flex-wrap: wrap; }
+  .ats-sidebar-card { flex: 1; min-width: 260px; }
+  .ats-steps { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .ats-steps::before { display: none; }
+}
+@media (max-width: 768px) {
+  .ats-hero { padding: 80px 0 48px; }
+  .ats-body { padding: 40px 0 60px; }
+  .ats-gauge-section, .ats-weights-section, .ats-how-section { padding: 24px 20px; }
+  .ats-card-header, .ats-card-body { padding: 18px 20px; }
+  .ats-card-body { padding-top: 16px; }
+  .ats-score-levels { grid-template-columns: repeat(2, 1fr); }
+  .ats-sub-scores { grid-template-columns: repeat(2, 1fr); }
+  .ats-weight-name { width: 110px; font-size: 13px; }
+  .ats-sidebar { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .ats-steps { grid-template-columns: 1fr; }
+  .ats-score-levels { grid-template-columns: 1fr 1fr; }
+  .ats-weight-row { flex-wrap: wrap; }
+  .ats-weight-bar-wrap { order: 3; width: 100%; }
+  .ats-weight-name { width: auto; flex: 1; }
+}

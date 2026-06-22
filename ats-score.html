@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#004AC6" />
+
+  <title>How ATS Scoring Works – NextCV AI Resume Builder</title>
+  <meta name="description" content="Learn how NextCV's ATS scoring engine works — 7 weighted sections, keyword analysis, and real-time feedback to help your resume pass Applicant Tracking Systems." />
+  <meta name="keywords" content="ATS score, resume ATS scoring, how ATS works, applicant tracking system, resume scoring engine, NextCV ATS" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nextcvbuilder.online/ats-score.html" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://nextcvbuilder.online/ats-score.html" />
+  <meta property="og:title"       content="How ATS Scoring Works – NextCV AI Resume Builder" />
+  <meta property="og:description" content="Understand exactly how NextCV scores your resume — 7 weighted sections, keyword detection, action verb analysis, and more." />
+  <meta property="og:image"       content="https://nextcvbuilder.online/assets/images/og-image.png" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/legal.css" />
+  <link rel="stylesheet" href="assets/css/ats-score.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/images/logo/logo.png" alt="NextCV – AI Resume Builder app icon"
+             class="logo-img" width="36" height="36" loading="eager" decoding="async" />
+        Next<span class="logo-accent">CV</span>
+      </a>
+      <ul class="nav__menu" id="navMenu" role="list">
+        <li><a href="index.html#features"  class="nav__link">Features</a></li>
+        <li><a href="index.html#templates" class="nav__link">Templates</a></li>
+        <li><a href="index.html#faq"       class="nav__link">FAQ</a></li>
+        <li><a href="index.html#contact"   class="nav__link">Contact</a></li>
+      </ul>
+      <a href="https://play.google.com/store/apps/details?id=com.empire.product.nexcv.nexcv" target="_blank" rel="noopener noreferrer"
+         class="btn btn-gplay btn-gplay-compact nav__cta">
+        <svg class="gplay-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M1.22 0L13.4 12 1.22 24C.5 23.7 0 23 0 22.2V1.8C0 1 .5.3 1.22 0z" fill="#EA4335"/>
+          <path d="M20.8 10.7L17.3 8.8 13.4 12l3.9 3.2 3.5-1.9c1-.6 1-2 0-2.6z" fill="#FBBC04"/>
+          <path d="M1.22 0C1.5-.1 1.8 0 2.1.1l15.2 8.7-3.9 3.2L1.22 0z" fill="#4285F4"/>
+          <path d="M1.22 24c.3.1.6.2.9.1L17.3 15.2l-3.9-3.2L1.22 24z" fill="#34A853"/>
+        </svg>
+        <span class="gplay-text"><small>GET IT ON</small><strong>Google Play</strong></span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="ats-hero">
+      <div class="container ats-hero-inner">
+        <div class="ats-hero-badge">
+          <i class="fa-solid fa-chart-bar"></i> ATS Scoring Engine
+        </div>
+        <h1>How Your ATS Score<br><span>is Calculated</span></h1>
+        <p>NextCV analyses 7 key resume sections using a weighted scoring
+           engine — completely offline, in real time. Here's exactly what
+           we check and how each point is earned.</p>
+        <div class="ats-hero-chips">
+          <span><i class="fa-solid fa-bolt"></i> 100% Offline</span>
+          <span><i class="fa-solid fa-lock"></i> On-Device Only</span>
+          <span><i class="fa-solid fa-layer-group"></i> 7 Weighted Sections</span>
+          <span><i class="fa-solid fa-key"></i> Keyword Analysis</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- BREADCRUMB -->
+    <div class="ats-breadcrumb">
+      <div class="container">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>ATS Scoring System</span>
+      </div>
+    </div>
+
+    <!-- BODY -->
+    <section class="ats-body">
+      <div class="container">
+        <div class="ats-grid">
+
+          <!-- ══ MAIN COLUMN ══════════════════════════════════ -->
+          <div class="ats-main">
+
+            <!-- Score Levels -->
+            <div class="ats-gauge-section">
+              <h2 class="ats-section-title"><i class="fa-solid fa-gauge-high"></i> Score Bands</h2>
+              <p class="ats-section-subtitle">Your overall score ranges from 0 to 100. Each band represents a different level of ATS readiness.</p>
+              <div class="ats-gauge-track">
+                <div class="ats-gauge-bands">
+                  <div class="ats-band ats-band-poor">0–40</div>
+                  <div class="ats-band ats-band-average">41–60</div>
+                  <div class="ats-band ats-band-good">61–80</div>
+                  <div class="ats-band ats-band-excellent">81–100</div>
+                </div>
+              </div>
+              <div class="ats-band-labels">
+                <span class="poor">Poor</span>
+                <span class="average">Average</span>
+                <span class="good">Good</span>
+                <span class="excellent">Excellent</span>
+              </div>
+              <div class="ats-score-levels">
+                <div class="ats-level-card ats-level-poor">
+                  <div class="level-score">0 – 40</div>
+                  <div class="level-label">Poor</div>
+                  <div class="level-desc">Needs significant work to pass ATS filters</div>
+                </div>
+                <div class="ats-level-card ats-level-average">
+                  <div class="level-score">41 – 60</div>
+                  <div class="level-label">Average</div>
+                  <div class="level-desc">Passes some filters but has clear gaps</div>
+                </div>
+                <div class="ats-level-card ats-level-good">
+                  <div class="level-score">61 – 80</div>
+                  <div class="level-label">Good</div>
+                  <div class="level-desc">Well-optimized; passes most ATS systems</div>
+                </div>
+                <div class="ats-level-card ats-level-excellent">
+                  <div class="level-score">81 – 100</div>
+                  <div class="level-label">Excellent</div>
+                  <div class="level-desc">Highly optimized; top-tier ATS performance</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- How it works -->
+            <div class="ats-how-section">
+              <h2 class="ats-section-title"><i class="fa-solid fa-gears"></i> How the Engine Works</h2>
+              <p class="ats-section-subtitle">NextCV's scoring engine runs entirely on your device — no data ever leaves your phone. Here's the analysis pipeline:</p>
+              <div class="ats-steps">
+                <div class="ats-step">
+                  <div class="ats-step-num">1</div>
+                  <div class="ats-step-label">Parse Resume</div>
+                  <div class="ats-step-desc">All sections of your saved resume are read</div>
+                </div>
+                <div class="ats-step">
+                  <div class="ats-step-num">2</div>
+                  <div class="ats-step-label">Score Sections</div>
+                  <div class="ats-step-desc">Each of 7 sections is individually scored 0–100</div>
+                </div>
+                <div class="ats-step">
+                  <div class="ats-step-num">3</div>
+                  <div class="ats-step-label">Apply Weights</div>
+                  <div class="ats-step-desc">Sections are multiplied by their importance weight</div>
+                </div>
+                <div class="ats-step">
+                  <div class="ats-step-num">4</div>
+                  <div class="ats-step-label">Final Score</div>
+                  <div class="ats-step-desc">Weighted sum gives your overall 0–100 ATS score</div>
+                </div>
+              </div>
+              <div class="ats-formula">
+                <p>
+                  Overall Score = Σ (Section Score × Section Weight)<br>
+                  <small>= (Experience × 30%) + (Skills × 20%) + (Summary × 15%) + (Personal Info × 10%) + (Education × 10%) + (Projects × 10%) + (Certifications × 5%)</small>
+                </p>
+              </div>
+            </div>
+
+            <!-- Section Weights Chart -->
+            <div class="ats-weights-section">
+              <h2 class="ats-section-title"><i class="fa-solid fa-weight-hanging"></i> Section Weights</h2>
+              <p class="ats-section-subtitle">Not all sections are equal. Work Experience carries the most weight because it's the #1 factor recruiters and ATS systems evaluate.</p>
+              <div class="ats-weights-list">
+                <div class="ats-weight-row w-experience">
+                  <div class="ats-weight-icon"><i class="fa-solid fa-briefcase"></i></div>
+                  <div class="ats-weight-name">Work Experience</div>
+                  <div class="ats-weight-bar-wrap"><div class="ats-weight-bar" style="width:30%"></div></div>
+                  <div class="ats-weight-pct">30%</div>
+                </div>
+                <div class="ats-weight-row w-skills">
+                  <div class="ats-weight-icon"><i class="fa-solid fa-code"></i></div>
+                  <div class="ats-weight-name">Skills</div>
+                  <div class="ats-weight-bar-wrap"><div class="ats-weight-bar" style="width:20%"></div></div>
+                  <div class="ats-weight-pct">20%</div>
+                </div>
+                <div class="ats-weight-row w-summary">
+                  <div class="ats-weight-icon"><i class="fa-solid fa-align-left"></i></div>
+                  <div class="ats-weight-name">Pro Summary</div>
+                  <div class="ats-weight-bar-wrap"><div class="ats-weight-bar" style="width:15%"></div></div>
+                  <div class="ats-weight-pct">15%</div>
+                </div>
+                <div class="ats-weight-row w-personal">
+                  <div class="ats-weight-icon"><i class="fa-solid fa-user"></i></div>
+                  <div class="ats-weight-name">Personal Info</div>
+                  <div class="ats-weight-bar-wrap"><div class="ats-weight-bar" style="width:10%"></div></div>
+                  <div class="ats-weight-pct">10%</div>
+                </div>
+                <div class="ats-weight-row w-education">
+                  <div class="ats-weight-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                  <div class="ats-weight-name">Education</div>
+                  <div class="ats-weight-bar-wrap"><div class="ats-weight-bar" style="width:10%"></div></div>
+                  <div class="ats-weight-pct">10%</div>
+                </div>
+                <div class="ats-weight-row w-projects">
+                  <div class="ats-weight-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                  <div class="ats-weight-name">Projects</div>
+                  <div class="ats-weight-bar-wrap"><div class="ats-weight-bar" style="width:10%"></div></div>
+                  <div class="ats-weight-pct">10%</div>
+                </div>
+                <div class="ats-weight-row w-certs">
+                  <div class="ats-weight-icon"><i class="fa-solid fa-certificate"></i></div>
+                  <div class="ats-weight-name">Certifications</div>
+                  <div class="ats-weight-bar-wrap"><div class="ats-weight-bar" style="width:5%"></div></div>
+                  <div class="ats-weight-pct">5%</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Section-by-section breakdown (accordion) -->
+            <h2 class="ats-section-title" style="margin-bottom:20px;">
+              <i class="fa-solid fa-list-check"></i> Section-by-Section Breakdown
+            </h2>
+            <p class="ats-section-subtitle" style="margin-top:-12px;">
+              Click any section to see exactly which criteria are checked and how points are awarded.
+            </p>
+
+            <div class="ats-sections-grid">
+
+              <!-- Work Experience -->
+              <div class="ats-section-card s-experience open">
+                <div class="ats-card-header" role="button" tabindex="0" aria-expanded="true">
+                  <div class="ats-card-icon"><i class="fa-solid fa-briefcase"></i></div>
+                  <div class="ats-card-title-wrap">
+                    <div class="ats-card-title">Work Experience</div>
+                    <div class="ats-card-subtitle">Highest impact section — recruiters read this first</div>
+                  </div>
+                  <span class="ats-card-weight-badge">30% weight</span>
+                  <i class="fa-solid fa-chevron-down ats-card-chevron"></i>
+                </div>
+                <div class="ats-card-body">
+                  <p class="ats-card-desc">Experience is the single most important section. The engine checks completeness, depth of descriptions, use of action verbs, and whether you've included measurable results.</p>
+                  <div class="ats-sub-scores">
+                    <div class="ats-sub-score-chip"><div class="pts">+20 <small>pts</small></div><div class="pts-label">Has experience</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+15 <small>pts</small></div><div class="pts-label">Company names filled</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+15 <small>pts</small></div><div class="pts-label">Job titles filled</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+25 <small>pts</small></div><div class="pts-label">Rich responsibilities</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+15 <small>pts</small></div><div class="pts-label">Action verbs used</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+10 <small>pts</small></div><div class="pts-label">Quantified results</div></div>
+                  </div>
+                  <ul class="ats-criteria-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Each role must have a company name and job title</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Responsibilities must be longer than 30 characters</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Descriptions should start with action verbs (Led, Built, Designed, Delivered…)</li>
+                    <li><i class="fa-solid fa-check-circle"></i> At least one entry should contain quantified achievements (numbers, percentages, team size)</li>
+                  </ul>
+                  <div class="ats-tip-box">
+                    <strong>Pro tip:</strong> Add at least 3–5 bullet points per role. Write "Reduced API latency by 40%" instead of "Worked on performance improvements" — numbers dramatically improve your ATS and recruiter score.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skills -->
+              <div class="ats-section-card s-skills">
+                <div class="ats-card-header" role="button" tabindex="0" aria-expanded="false">
+                  <div class="ats-card-icon"><i class="fa-solid fa-code"></i></div>
+                  <div class="ats-card-title-wrap">
+                    <div class="ats-card-title">Skills</div>
+                    <div class="ats-card-subtitle">Keyword density determines ATS shortlisting</div>
+                  </div>
+                  <span class="ats-card-weight-badge">20% weight</span>
+                  <i class="fa-solid fa-chevron-down ats-card-chevron"></i>
+                </div>
+                <div class="ats-card-body">
+                  <p class="ats-card-desc">ATS systems scan for skill keywords before a human ever reads your resume. The engine checks quantity, diversity across categories, and whether technical and soft skills are both present.</p>
+                  <div class="ats-sub-scores">
+                    <div class="ats-sub-score-chip"><div class="pts">+20 <small>pts</small></div><div class="pts-label">Has skills</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+30 <small>pts</small></div><div class="pts-label">15+ skills listed</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+20 <small>pts</small></div><div class="pts-label">Technical skills present</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+20 <small>pts</small></div><div class="pts-label">Soft skills / tools</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+10 <small>pts</small></div><div class="pts-label">2+ categories used</div></div>
+                  </div>
+                  <ul class="ats-criteria-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Aim for 15 or more skills total</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Include at least one Technical skill (languages, frameworks)</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Include at least one Soft skill or Tool</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Use at least 2 skill categories for better ATS keyword parsing</li>
+                  </ul>
+                  <div class="ats-tip-box">
+                    <strong>Pro tip:</strong> Organize skills into Technical, Tools, and Soft Skills categories. ATS systems match job description keywords against your skills list — the more relevant keywords you include, the higher your match score.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Professional Summary -->
+              <div class="ats-section-card s-summary">
+                <div class="ats-card-header" role="button" tabindex="0" aria-expanded="false">
+                  <div class="ats-card-icon"><i class="fa-solid fa-align-left"></i></div>
+                  <div class="ats-card-title-wrap">
+                    <div class="ats-card-title">Professional Summary</div>
+                    <div class="ats-card-subtitle">Your elevator pitch to recruiters and ATS alike</div>
+                  </div>
+                  <span class="ats-card-weight-badge">15% weight</span>
+                  <i class="fa-solid fa-chevron-down ats-card-chevron"></i>
+                </div>
+                <div class="ats-card-body">
+                  <p class="ats-card-desc">A well-written summary boosts keyword density at the top of your resume — exactly where ATS parsers place highest importance. Length, action verbs, and sentence structure all affect your score.</p>
+                  <div class="ats-sub-scores">
+                    <div class="ats-sub-score-chip"><div class="pts">+20 <small>pts</small></div><div class="pts-label">Summary present</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+45 <small>pts</small></div><div class="pts-label">80+ words</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+20 <small>pts</small></div><div class="pts-label">Action verbs used</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+15 <small>pts</small></div><div class="pts-label">2+ sentences</div></div>
+                  </div>
+                  <ul class="ats-criteria-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Must be present (missing = 0 points)</li>
+                    <li><i class="fa-solid fa-check-circle"></i> 80+ words earns maximum length points (50+: partial, 20+: minimal)</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Must include action verbs (Led, Developed, Delivered, Managed…)</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Must have at least 2 complete sentences</li>
+                  </ul>
+                  <div class="ats-tip-box">
+                    <strong>Pro tip:</strong> Write 80–120 words. Start with your job title and years of experience, mention 2–3 core strengths, then state what value you bring. Use the same keywords from job descriptions you're targeting.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Personal Info -->
+              <div class="ats-section-card s-personal">
+                <div class="ats-card-header" role="button" tabindex="0" aria-expanded="false">
+                  <div class="ats-card-icon"><i class="fa-solid fa-user"></i></div>
+                  <div class="ats-card-title-wrap">
+                    <div class="ats-card-title">Personal Information</div>
+                    <div class="ats-card-subtitle">Contact fields — critical for recruiter reach</div>
+                  </div>
+                  <span class="ats-card-weight-badge">10% weight</span>
+                  <i class="fa-solid fa-chevron-down ats-card-chevron"></i>
+                </div>
+                <div class="ats-card-body">
+                  <p class="ats-card-desc">ATS systems extract contact details to create candidate profiles. Missing email or phone means recruiters can't reach you — these fields are checked first.</p>
+                  <div class="ats-sub-scores">
+                    <div class="ats-sub-score-chip"><div class="pts">+30 <small>pts</small></div><div class="pts-label">Email present</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+30 <small>pts</small></div><div class="pts-label">Phone present</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+25 <small>pts</small></div><div class="pts-label">LinkedIn URL</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+15 <small>pts</small></div><div class="pts-label">Portfolio / GitHub</div></div>
+                  </div>
+                  <ul class="ats-criteria-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Professional email address (30 pts)</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Mobile phone number (30 pts)</li>
+                    <li><i class="fa-solid fa-check-circle"></i> LinkedIn profile URL (25 pts — strongly recommended)</li>
+                    <li><i class="fa-solid fa-circle-dot"></i> Portfolio or GitHub URL (15 pts — optional bonus)</li>
+                  </ul>
+                  <div class="ats-tip-box">
+                    <strong>Pro tip:</strong> A missing LinkedIn URL costs you 25 points in this section. Most modern recruiters verify candidates on LinkedIn — always include it. Portfolio/GitHub is especially valuable for tech and design roles.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Education -->
+              <div class="ats-section-card s-education">
+                <div class="ats-card-header" role="button" tabindex="0" aria-expanded="false">
+                  <div class="ats-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                  <div class="ats-card-title-wrap">
+                    <div class="ats-card-title">Education</div>
+                    <div class="ats-card-subtitle">Qualification verification and degree matching</div>
+                  </div>
+                  <span class="ats-card-weight-badge">10% weight</span>
+                  <i class="fa-solid fa-chevron-down ats-card-chevron"></i>
+                </div>
+                <div class="ats-card-body">
+                  <p class="ats-card-desc">Many job postings set minimum degree requirements. ATS systems verify these automatically. The engine checks that your primary qualification has all required fields.</p>
+                  <div class="ats-sub-scores">
+                    <div class="ats-sub-score-chip"><div class="pts">+40 <small>pts</small></div><div class="pts-label">Entry present</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+25 <small>pts</small></div><div class="pts-label">Degree name</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+20 <small>pts</small></div><div class="pts-label">Institution name</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+15 <small>pts</small></div><div class="pts-label">Field of study</div></div>
+                  </div>
+                  <ul class="ats-criteria-list">
+                    <li><i class="fa-solid fa-check-circle"></i> At least one education entry must be present</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Degree name (e.g. Bachelor of Engineering)</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Institution / University name</li>
+                    <li><i class="fa-solid fa-circle-dot"></i> Field of study / Major (bonus 15 pts)</li>
+                  </ul>
+                  <div class="ats-tip-box">
+                    <strong>Pro tip:</strong> Always use the full official name of your degree and institution — ATS systems match against exact degree filters. "B.Tech" alone is weaker than "Bachelor of Technology in Computer Science."
+                  </div>
+                </div>
+              </div>
+
+              <!-- Projects -->
+              <div class="ats-section-card s-projects">
+                <div class="ats-card-header" role="button" tabindex="0" aria-expanded="false">
+                  <div class="ats-card-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                  <div class="ats-card-title-wrap">
+                    <div class="ats-card-title">Projects</div>
+                    <div class="ats-card-subtitle">Demonstrates hands-on practical experience</div>
+                  </div>
+                  <span class="ats-card-weight-badge">10% weight</span>
+                  <i class="fa-solid fa-chevron-down ats-card-chevron"></i>
+                </div>
+                <div class="ats-card-body">
+                  <p class="ats-card-desc">Projects are especially valuable for freshers, career-switchers, and tech roles where portfolio work matters. The engine rewards meaningful descriptions and listed technologies.</p>
+                  <div class="ats-sub-scores">
+                    <div class="ats-sub-score-chip"><div class="pts">+30 <small>pts</small></div><div class="pts-label">Projects present</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+40 <small>pts</small></div><div class="pts-label">Descriptions &gt;20 chars</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+30 <small>pts</small></div><div class="pts-label">Technologies listed</div></div>
+                  </div>
+                  <ul class="ats-criteria-list">
+                    <li><i class="fa-solid fa-check-circle"></i> At least one project entry</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Description must be more than 20 characters (2–3 sentences recommended)</li>
+                    <li><i class="fa-solid fa-check-circle"></i> List the technologies / frameworks used (adds keyword coverage)</li>
+                  </ul>
+                  <div class="ats-tip-box">
+                    <strong>Pro tip:</strong> Describe the problem you solved, the approach you took, and the outcome or impact. Listing technologies (React, Node.js, PostgreSQL) directly boosts your skill keyword density for ATS matching.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Certifications -->
+              <div class="ats-section-card s-certs">
+                <div class="ats-card-header" role="button" tabindex="0" aria-expanded="false">
+                  <div class="ats-card-icon"><i class="fa-solid fa-certificate"></i></div>
+                  <div class="ats-card-title-wrap">
+                    <div class="ats-card-title">Certifications</div>
+                    <div class="ats-card-subtitle">Industry credentials that signal verified expertise</div>
+                  </div>
+                  <span class="ats-card-weight-badge">5% weight</span>
+                  <i class="fa-solid fa-chevron-down ats-card-chevron"></i>
+                </div>
+                <div class="ats-card-body">
+                  <p class="ats-card-desc">Certifications carry lower weight but provide a free bonus to your score and signal credibility. Complete certification entries (with issuer and date) score the maximum points.</p>
+                  <div class="ats-sub-scores">
+                    <div class="ats-sub-score-chip"><div class="pts">+50 <small>pts</small></div><div class="pts-label">Certs present</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+30 <small>pts</small></div><div class="pts-label">Issuer named</div></div>
+                    <div class="ats-sub-score-chip"><div class="pts">+20 <small>pts</small></div><div class="pts-label">Issue date added</div></div>
+                  </div>
+                  <ul class="ats-criteria-list">
+                    <li><i class="fa-solid fa-check-circle"></i> At least one certification entry</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Issuing organization (Google, AWS, Microsoft, Coursera…)</li>
+                    <li><i class="fa-solid fa-circle-dot"></i> Issue date (confirms currency of the credential)</li>
+                  </ul>
+                  <div class="ats-tip-box">
+                    <strong>Pro tip:</strong> Even one relevant certification (AWS Cloud Practitioner, Google Data Analytics, Scrum Master) can set you apart. Add the full issuer name — "AWS" is less impactful than "Amazon Web Services."
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /sections-grid -->
+
+          </div><!-- /main -->
+
+          <!-- ══ SIDEBAR ════════════════════════════════════ -->
+          <aside class="ats-sidebar">
+
+            <!-- CTA -->
+            <div class="ats-sidebar-card ats-cta-card">
+              <h3><i class="fa-solid fa-rocket"></i> Check Your Score Now</h3>
+              <p>Build your resume in NextCV and see your ATS score instantly — no internet required.</p>
+              <a href="https://play.google.com/store/apps/details?id=com.empire.product.nexcv.nexcv"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn-gplay">
+                <svg class="gplay-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M1.22 0L13.4 12 1.22 24C.5 23.7 0 23 0 22.2V1.8C0 1 .5.3 1.22 0z" fill="#EA4335"/>
+                  <path d="M20.8 10.7L17.3 8.8 13.4 12l3.9 3.2 3.5-1.9c1-.6 1-2 0-2.6z" fill="#FBBC04"/>
+                  <path d="M1.22 0C1.5-.1 1.8 0 2.1.1l15.2 8.7-3.9 3.2L1.22 0z" fill="#4285F4"/>
+                  <path d="M1.22 24c.3.1.6.2.9.1L17.3 15.2l-3.9-3.2L1.22 24z" fill="#34A853"/>
+                </svg>
+                <span class="gplay-text"><small>GET IT ON</small><strong>Google Play</strong></span>
+              </a>
+            </div>
+
+            <!-- Quick Reference -->
+            <div class="ats-sidebar-card">
+              <h3><i class="fa-solid fa-bookmark"></i> Quick Reference</h3>
+              <div class="score-guide-list">
+                <div class="score-guide-item">
+                  <div class="score-guide-dot" style="background:#ef4444"></div>
+                  <div class="range" style="color:#dc2626">0–40</div>
+                  <div class="desc">Poor — likely filtered out</div>
+                </div>
+                <div class="score-guide-item">
+                  <div class="score-guide-dot" style="background:#f97316"></div>
+                  <div class="range" style="color:#ea580c">41–60</div>
+                  <div class="desc">Average — needs work</div>
+                </div>
+                <div class="score-guide-item">
+                  <div class="score-guide-dot" style="background:#eab308"></div>
+                  <div class="range" style="color:#ca8a04">61–80</div>
+                  <div class="desc">Good — passes most ATS</div>
+                </div>
+                <div class="score-guide-item">
+                  <div class="score-guide-dot" style="background:#22c55e"></div>
+                  <div class="range" style="color:#16a34a">81–100</div>
+                  <div class="desc">Excellent — top tier</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ATS Checklist -->
+            <div class="ats-sidebar-card">
+              <h3><i class="fa-solid fa-list-check"></i> ATS Checklist</h3>
+              <ul class="ats-checklist">
+                <li><i class="fa-solid fa-circle-check"></i> Email + phone present</li>
+                <li><i class="fa-solid fa-circle-check"></i> LinkedIn URL added</li>
+                <li><i class="fa-solid fa-circle-check"></i> 80+ word summary with action verbs</li>
+                <li><i class="fa-solid fa-circle-check"></i> 3+ experience entries with descriptions</li>
+                <li><i class="fa-solid fa-circle-check"></i> Quantified achievements (%, numbers)</li>
+                <li><i class="fa-solid fa-circle-check"></i> 15+ skills across 2+ categories</li>
+                <li><i class="fa-solid fa-circle-check"></i> Degree + institution + field of study</li>
+                <li><i class="fa-solid fa-circle-check"></i> At least one project with tech stack</li>
+                <li><i class="fa-solid fa-circle-check"></i> At least one certification with issuer</li>
+              </ul>
+            </div>
+
+            <!-- Weight summary mini -->
+            <div class="ats-sidebar-card">
+              <h3><i class="fa-solid fa-chart-pie"></i> Weight Summary</h3>
+              <div class="ats-checklist">
+                <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:#374151;">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#2563EB;display:inline-block;flex-shrink:0"></span>
+                  <span style="flex:1">Work Experience</span><strong>30%</strong>
+                </li>
+                <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:#374151;margin-top:8px;">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#7c3aed;display:inline-block;flex-shrink:0"></span>
+                  <span style="flex:1">Skills</span><strong>20%</strong>
+                </li>
+                <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:#374151;margin-top:8px;">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#059669;display:inline-block;flex-shrink:0"></span>
+                  <span style="flex:1">Pro Summary</span><strong>15%</strong>
+                </li>
+                <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:#374151;margin-top:8px;">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#f59e0b;display:inline-block;flex-shrink:0"></span>
+                  <span style="flex:1">Personal Info</span><strong>10%</strong>
+                </li>
+                <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:#374151;margin-top:8px;">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#ec4899;display:inline-block;flex-shrink:0"></span>
+                  <span style="flex:1">Education</span><strong>10%</strong>
+                </li>
+                <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:#374151;margin-top:8px;">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#14b8a6;display:inline-block;flex-shrink:0"></span>
+                  <span style="flex:1">Projects</span><strong>10%</strong>
+                </li>
+                <li style="display:flex;gap:8px;align-items:center;font-size:13px;color:#374151;margin-top:8px;">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#ef4444;display:inline-block;flex-shrink:0"></span>
+                  <span style="flex:1">Certifications</span><strong>5%</strong>
+                </li>
+              </div>
+            </div>
+
+          </aside>
+
+        </div><!-- /ats-grid -->
+      </div><!-- /container -->
+    </section>
+
+    <!-- BOTTOM CTA BANNER -->
+    <section class="ats-cta-banner">
+      <div class="container ats-cta-banner-inner">
+        <h2>Ready to Hit 80+?</h2>
+        <p>Download NextCV, build your resume, and see your ATS score in real time — completely free.</p>
+        <div class="cta-btns">
+          <a href="https://play.google.com/store/apps/details?id=com.empire.product.nexcv.nexcv"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-gplay">
+            <svg class="gplay-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1.22 0L13.4 12 1.22 24C.5 23.7 0 23 0 22.2V1.8C0 1 .5.3 1.22 0z" fill="#EA4335"/>
+              <path d="M20.8 10.7L17.3 8.8 13.4 12l3.9 3.2 3.5-1.9c1-.6 1-2 0-2.6z" fill="#FBBC04"/>
+              <path d="M1.22 0C1.5-.1 1.8 0 2.1.1l15.2 8.7-3.9 3.2L1.22 0z" fill="#4285F4"/>
+              <path d="M1.22 24c.3.1.6.2.9.1L17.3 15.2l-3.9-3.2L1.22 24z" fill="#34A853"/>
+            </svg>
+            <span class="gplay-text"><small>GET IT ON</small><strong>Google Play</strong></span>
+          </a>
+          <a href="index.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.4);color:#fff;">
+            <i class="fa-solid fa-house"></i> Back to Home
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="assets/images/logo/logo.png" alt="NextCV – AI Resume Builder app icon"
+               class="logo-img" width="36" height="36" loading="lazy" decoding="async" />
+          Next<span class="logo-accent">CV</span>
+        </a>
+        <p class="footer-tagline">Create Professional ATS-Friendly<br>Resumes in Minutes.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="LinkedIn"  class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"  class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#templates">Templates</a></li>
+          <li><a href="index.html#screenshots">Screenshots</a></li>
+          <li><a href="ats-score.html">ATS Score Guide</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Legal</h4>
+        <ul class="footer-links" role="list">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="privacy.html#cookies">Cookie Policy</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="delete-account.html">Delete Account</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Contact</h4>
+        <div class="footer-contact-info">
+          <p><i class="fa-solid fa-envelope"></i>
+            <a href="mailto:support@nextcvbuilder.online">support@nextcvbuilder.online</a>
+          </p>
+          <p><i class="fa-solid fa-globe"></i> nextcvbuilder.online</p>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.empire.product.nexcv.nexcv" target="_blank" rel="noopener noreferrer"
+           class="btn btn-gplay footer-dl-btn">
+          <svg class="gplay-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M1.22 0L13.4 12 1.22 24C.5 23.7 0 23 0 22.2V1.8C0 1 .5.3 1.22 0z" fill="#EA4335"/>
+            <path d="M20.8 10.7L17.3 8.8 13.4 12l3.9 3.2 3.5-1.9c1-.6 1-2 0-2.6z" fill="#FBBC04"/>
+            <path d="M1.22 0C1.5-.1 1.8 0 2.1.1l15.2 8.7-3.9 3.2L1.22 0z" fill="#4285F4"/>
+            <path d="M1.22 24c.3.1.6.2.9.1L17.3 15.2l-3.9-3.2L1.22 24z" fill="#34A853"/>
+          </svg>
+          <span class="gplay-text"><small>GET IT ON</small><strong>Google Play</strong></span>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 NextCV. All Rights Reserved. Built by Empire Softtech.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Scroll to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    // Accordion toggle
+    document.querySelectorAll('.ats-card-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const card = header.closest('.ats-section-card');
+        const isOpen = card.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.ats-section-card.open').forEach(c => c.classList.remove('open'));
+        // Toggle clicked
+        if (!isOpen) card.classList.add('open');
+        header.setAttribute('aria-expanded', !isOpen);
+      });
+      header.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); header.click(); }
+      });
+    });
+  </script>
+</body>
+</html>
