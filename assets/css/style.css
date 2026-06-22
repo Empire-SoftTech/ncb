@@ -167,6 +167,51 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   box-shadow: var(--shadow-lg);
 }
 
+/* ── Official Google Play badge button ── */
+.btn-gplay {
+  background: #000;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 2px 8px rgba(0,0,0,.35);
+  gap: 10px;
+}
+.btn-gplay:hover {
+  background: #1a1a1a;
+  box-shadow: 0 4px 16px rgba(0,0,0,.45);
+  transform: translateY(-2px);
+}
+/* Google Play 4-color icon inside badge */
+.btn-gplay .gplay-icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+/* Two-line badge text (Get it on / Google Play) */
+.btn-gplay .gplay-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  text-align: left;
+}
+.btn-gplay .gplay-text small {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: rgba(255,255,255,0.8);
+}
+.btn-gplay .gplay-text strong {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.2px;
+}
+/* compact single-line variant (used in nav) */
+.btn-gplay.btn-gplay-compact {
+  padding: 9px 18px;
+  gap: 8px;
+}
+.btn-gplay.btn-gplay-compact .gplay-icon { width: 16px; height: 16px; }
+
 .btn-outline-white {
   background: transparent;
   color: #fff;
