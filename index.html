@@ -59,7 +59,7 @@
     "description": "NextCV is an AI-powered mobile resume builder that creates ATS-friendly professional resumes in minutes.",
     "email": "support@nextcvbuilder.online",
     "sameAs": [
-      "https://play.google.com/store/apps/details?id=com.nextcv.app"
+      "https://play.google.com/store/apps/details?id=com.empire.product.nexcv.nexcv"
     ]
   }
   </script>
@@ -75,7 +75,7 @@
     "applicationSubCategory": "Productivity",
     "description": "Create ATS-friendly professional resumes in minutes with NextCV. AI-powered suggestions, professional templates, and instant PDF export — all from your phone.",
     "url": "https://nextcvbuilder.online/",
-    "downloadUrl": "https://play.google.com/store/apps/details?id=com.nextcv.app",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.empire.product.nexcv.nexcv",
     "screenshot": "https://nextcvbuilder.online/assets/images/og-image.png",
     "image": "https://nextcvbuilder.online/assets/images/og-image.png",
     "softwareVersion": "1.0",
@@ -593,148 +593,28 @@
           <p class="section-sub">Handcrafted by career experts. Optimized for ATS. Ready to impress.</p>
         </div>
 
-        <div class="templates-grid">
+        <div class="slider-wrapper">
+          <button class="slider-btn slider-prev" id="tmplSliderPrev" aria-label="Previous template">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
 
-          <div class="tmpl-card reveal" data-name="Modern Template">
-            <div class="tmpl-preview tmpl-modern">
-              <div class="tmpl-header tmpl-hdr-blue">
-                <div class="t-bar t-bar-xl t-bar-white"></div>
-                <div class="t-bar t-bar-lg t-bar-light mt4"></div>
-                <div class="tmpl-contact-row mt8">
-                  <div class="t-bar t-bar-sm t-bar-light"></div>
-                  <div class="t-bar t-bar-sm t-bar-light"></div>
-                </div>
-              </div>
-              <div class="tmpl-body">
-                <div class="tmpl-section">
-                  <div class="t-section-label t-sl-blue"></div>
-                  <div class="t-bar t-bar-full mt4"></div>
-                  <div class="t-bar t-bar-lg mt4"></div>
-                </div>
-                <div class="tmpl-section">
-                  <div class="t-section-label t-sl-blue"></div>
-                  <div class="t-bar t-bar-lg mt4"></div>
-                  <div class="t-bar t-bar-sm t-bar-gray mt2"></div>
-                  <div class="t-bar t-bar-full mt4"></div>
-                  <div class="t-bar t-bar-lg mt2"></div>
-                </div>
-                <div class="t-chips mt8">
-                  <div class="t-chip t-chip-blue"></div>
-                  <div class="t-chip t-chip-blue"></div>
-                  <div class="t-chip t-chip-blue"></div>
-                </div>
-              </div>
-            </div>
-            <div class="tmpl-info">
-              <h3>Modern</h3>
-              <p>Bold headers, clean layout — perfect for tech and creative roles.</p>
-              <span class="tmpl-badge tmpl-badge-blue">Most Popular</span>
+          <div class="slider-viewport">
+            <div class="slider-track" id="tmplSliderTrack">
+              <!-- Slides injected by assets/js/templates.js from assets/data/templates_data.js -->
             </div>
           </div>
 
-          <div class="tmpl-card reveal" data-name="Professional Template">
-            <div class="tmpl-preview tmpl-professional">
-              <div class="tmpl-header tmpl-hdr-dark">
-                <div class="t-bar t-bar-xl t-bar-white"></div>
-                <div class="t-bar t-bar-lg t-bar-light mt4"></div>
-              </div>
-              <div class="tmpl-body tmpl-two-col">
-                <div class="tmpl-sidebar">
-                  <div class="t-section-label t-sl-dark"></div>
-                  <div class="t-bar t-bar-full mt4"></div>
-                  <div class="t-bar t-bar-full mt2"></div>
-                  <div class="t-section-label t-sl-dark mt8"></div>
-                  <div class="t-chips-col mt4">
-                    <div class="t-chip t-chip-dark"></div>
-                    <div class="t-chip t-chip-dark mt4"></div>
-                  </div>
-                </div>
-                <div class="tmpl-main-col">
-                  <div class="t-section-label t-sl-dark"></div>
-                  <div class="t-bar t-bar-lg mt4"></div>
-                  <div class="t-bar t-bar-full mt2"></div>
-                  <div class="t-bar t-bar-lg mt2"></div>
-                  <div class="t-section-label t-sl-dark mt8"></div>
-                  <div class="t-bar t-bar-lg mt4"></div>
-                  <div class="t-bar t-bar-sm t-bar-gray mt2"></div>
-                  <div class="t-bar t-bar-full mt2"></div>
-                </div>
-              </div>
-            </div>
-            <div class="tmpl-info">
-              <h3>Professional</h3>
-              <p>Two-column sidebar layout — ideal for corporate and finance roles.</p>
-              <span class="tmpl-badge tmpl-badge-green">ATS Optimized</span>
-            </div>
-          </div>
+          <button class="slider-btn slider-next" id="tmplSliderNext" aria-label="Next template">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
 
-          <div class="tmpl-card reveal" data-name="Executive Template">
-            <div class="tmpl-preview tmpl-executive">
-              <div class="tmpl-header tmpl-hdr-clean">
-                <div class="t-bar t-bar-xl t-bar-dark"></div>
-                <div class="t-bar t-bar-lg t-bar-accent mt4"></div>
-                <div class="t-divider mt8"></div>
-                <div class="tmpl-contact-row mt6">
-                  <div class="t-bar t-bar-sm t-bar-gray"></div>
-                  <div class="t-bar t-bar-sm t-bar-gray"></div>
-                  <div class="t-bar t-bar-sm t-bar-gray"></div>
-                </div>
-              </div>
-              <div class="tmpl-body">
-                <div class="tmpl-section">
-                  <div class="t-section-label t-sl-accent"></div>
-                  <div class="t-bar t-bar-full mt4"></div>
-                  <div class="t-bar t-bar-lg mt2"></div>
-                </div>
-                <div class="tmpl-section">
-                  <div class="t-section-label t-sl-accent"></div>
-                  <div class="t-bar t-bar-lg mt4"></div>
-                  <div class="t-bar t-bar-sm t-bar-gray mt2"></div>
-                  <div class="t-bar t-bar-full mt2"></div>
-                  <div class="t-bar t-bar-lg mt2"></div>
-                </div>
-              </div>
-            </div>
-            <div class="tmpl-info">
-              <h3>Executive</h3>
-              <p>Elegant typography for senior-level professionals and leadership roles.</p>
-              <span class="tmpl-badge tmpl-badge-purple">Premium</span>
-            </div>
-          </div>
+        <div class="slider-dots" id="tmplSliderDots" role="tablist" aria-label="Template slides"></div>
 
-          <div class="tmpl-card reveal" data-name="Minimal Template">
-            <div class="tmpl-preview tmpl-minimal">
-              <div class="tmpl-header tmpl-hdr-minimal">
-                <div class="t-bar t-bar-xl t-bar-dark"></div>
-                <div class="t-bar t-bar-lg t-bar-accent mt4"></div>
-                <div class="t-bar t-bar-sm t-bar-gray mt4"></div>
-              </div>
-              <div class="tmpl-body">
-                <div class="tmpl-section">
-                  <div class="t-section-label t-sl-minimal"></div>
-                  <div class="t-bar t-bar-full mt4"></div>
-                  <div class="t-bar t-bar-lg mt2"></div>
-                </div>
-                <div class="tmpl-section">
-                  <div class="t-section-label t-sl-minimal"></div>
-                  <div class="t-bar t-bar-lg mt4"></div>
-                  <div class="t-bar t-bar-sm t-bar-gray mt2"></div>
-                  <div class="t-bar t-bar-full mt2"></div>
-                </div>
-                <div class="t-chips mt8">
-                  <div class="t-chip t-chip-outline"></div>
-                  <div class="t-chip t-chip-outline"></div>
-                  <div class="t-chip t-chip-outline"></div>
-                </div>
-              </div>
-            </div>
-            <div class="tmpl-info">
-              <h3>Minimal</h3>
-              <p>Clean whitespace-first design — lets your content and achievements shine.</p>
-              <span class="tmpl-badge tmpl-badge-gray">Classic</span>
-            </div>
-          </div>
-
+        <div class="tmpl-more-cta">
+          <a href="templates.html" class="btn btn-primary btn-lg">
+            View All Templates <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -1189,6 +1069,8 @@
     <i class="fa-solid fa-chevron-up"></i>
   </button>
 
+  <script src="assets/data/templates_data.js"></script>
+  <script src="assets/js/templates.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>

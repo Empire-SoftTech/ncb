@@ -1499,6 +1499,108 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--blue);
 }
 
+/* ── Homepage template slider — real thumbnail cards ─────── */
+.tmpl-slide-card {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--trans), box-shadow var(--trans);
+}
+.tmpl-slide-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+.tmpl-slide-thumb {
+  position: relative;
+  aspect-ratio: 1 / 1.35;
+  background: var(--bg);
+  overflow: hidden;
+}
+.tmpl-slide-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.tmpl-slide-badge {
+  position: absolute;
+  top: 10px;
+  font-family: var(--font-body);
+  font-size: .68rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  color: #fff;
+  letter-spacing: .01em;
+}
+.tmpl-slide-badge-ats { left: 10px; background: var(--teal); }
+.tmpl-slide-badge-pro {
+  right: 10px;
+  background: linear-gradient(135deg, var(--blue), var(--blue-mid));
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.tmpl-slide-info { padding: 14px 16px 18px; }
+.tmpl-slide-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+.tmpl-slide-title {
+  font-family: var(--font-head);
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.tmpl-slide-discount {
+  font-family: var(--font-body);
+  font-size: .62rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--red);
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.tmpl-slide-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+.tmpl-slide-cat { font-size: .78rem; color: var(--text-lt); }
+.tmpl-slide-price-free {
+  font-family: var(--font-body);
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--teal);
+}
+.tmpl-slide-price-now {
+  font-family: var(--font-body);
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--blue);
+}
+.tmpl-slide-price-orig {
+  font-family: var(--font-body);
+  font-size: .72rem;
+  color: var(--text-xlt);
+  text-decoration: line-through;
+  margin-right: 4px;
+}
+
+.tmpl-more-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
 /* ═════════════════════════════════════════════════════════
    COMPARISON TABLE
 ═════════════════════════════════════════════════════════ */

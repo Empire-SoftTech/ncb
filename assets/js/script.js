@@ -57,6 +57,11 @@ const sections = document.querySelectorAll('section[id]');
 const navLinks  = document.querySelectorAll('.nav__link');
 
 function highlightNavLink() {
+  // No scroll-spy sections on this page (e.g. templates.html/template.html) —
+  // leave whichever nav link is already marked active (server-rendered for
+  // the current page) alone instead of clearing it.
+  if (!sections.length) return;
+
   const scrollMid = window.scrollY + window.innerHeight / 3;
   let current = '';
   sections.forEach(sec => {
@@ -119,13 +124,15 @@ const revealObserver = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-/* ── Screenshot slider ───────────────────────────────────── */
-const track       = document.getElementById('sliderTrack');
-const prevBtn     = document.getElementById('sliderPrev');
-const nextBtn     = document.getElementById('sliderNext');
-const dotsContainer = document.getElementById('sliderDots');
+/* ── Generic slider engine (screenshots + templates) ─────── */
+function initSlider({ trackId, prevId, nextId, dotsId, autoSlideMs = 4000 }) {
+  const track         = document.getElementById(trackId);
+  const prevBtn       = document.getElementById(prevId);
+  const nextBtn       = document.getElementById(nextId);
+  const dotsContainer = document.getElementById(dotsId);
 
-if (track) {
+  if (!track || !track.children.length) return;
+
   const slides = Array.from(track.children);
   let current  = 0;
   let autoSlideTimer;
@@ -184,7 +191,7 @@ if (track) {
   function startAutoSlide() {
     autoSlideTimer = setInterval(() => {
       goTo(current >= totalPositions() ? 0 : current + 1);
-    }, 4000);
+    }, autoSlideMs);
   }
 
   function resetAutoSlide() {
@@ -218,6 +225,9 @@ if (track) {
   goTo(0);
   startAutoSlide();
 }
+
+initSlider({ trackId: 'sliderTrack', prevId: 'sliderPrev', nextId: 'sliderNext', dotsId: 'sliderDots' });
+initSlider({ trackId: 'tmplSliderTrack', prevId: 'tmplSliderPrev', nextId: 'tmplSliderNext', dotsId: 'tmplSliderDots' });
 
 /* ── FAQ accordion ───────────────────────────────────────── */
 document.querySelectorAll('.faq-item').forEach(item => {

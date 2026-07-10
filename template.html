@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2563EB" />
+
+  <title>Resume Template | NextCV</title>
+  <meta name="description" content="View this resume template on NextCV. Download the app to build your resume with this design." />
+
+  <!-- ═══ Open Graph (Facebook, LinkedIn, WhatsApp) ═══ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Professional Resume Template | NextCV" />
+  <meta property="og:description" content="Browse ATS-friendly, professionally designed resume templates on NextCV and build your resume in minutes." />
+  <meta property="og:url"         content="https://nextcvbuilder.online/template.html" />
+  <meta property="og:site_name"   content="NextCV" />
+  <meta property="og:locale"      content="en_US" />
+  <meta property="og:image"       content="https://nextcvbuilder.online/assets/images/og-image.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"   content="NextCV – AI Resume Builder app icon" />
+  <meta property="og:image:type"  content="image/png" />
+
+  <!-- ═══ Twitter / X Card ═══ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Professional Resume Template | NextCV" />
+  <meta name="twitter:description" content="Browse ATS-friendly, professionally designed resume templates on NextCV and build your resume in minutes." />
+  <meta name="twitter:image"       content="https://nextcvbuilder.online/assets/images/og-image.png" />
+  <meta name="twitter:image:alt"   content="NextCV – AI Resume Builder" />
+  <meta name="twitter:site"        content="@nextcvapp" />
+  <meta name="twitter:creator"     content="@nextcvapp" />
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" sizes="32x32" />
+
+  <!-- Fonts & CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <!-- Template Logic -->
+  <script src="assets/data/templates_data.js"></script>
+  <script src="assets/js/templates.js" defer></script>
+</head>
+<body class="bg-gray-50 font-[Plus_Jakarta_Sans] text-gray-800 antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo">
+        <img src="./assets/images/logo/logo.png"
+             alt="NextCV – AI Resume Builder app icon"
+             class="logo-img"
+             width="36" height="36"
+             loading="eager"
+             decoding="async" />
+        Next<span class="logo-accent">CV</span>
+      </a>
+
+      <ul class="nav__menu" id="navMenu" role="list">
+        <li><a href="index.html#home"        class="nav__link">Home</a></li>
+        <li><a href="index.html#features"    class="nav__link">Features</a></li>
+        <li><a href="templates.html"         class="nav__link">Templates</a></li>
+        <li><a href="index.html#screenshots" class="nav__link">Screenshots</a></li>
+        <li><a href="index.html#faq"         class="nav__link">FAQ</a></li>
+        <li><a href="index.html#contact"     class="nav__link">Contact</a></li>
+      </ul>
+
+      <a href="https://play.google.com/store/apps/details?id=com.empire.product.nexcv.nexcv" target="_blank" rel="noopener noreferrer"
+         class="gplay-badge-link nav__cta">
+        <img src="assets/images/google-play-badge.svg" alt="Get it on Google Play" class="gplay-badge" loading="lazy" />
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Detail Section -->
+  <main class="pt-24 pb-20 bg-white min-h-screen">
+    <div id="template-detail" class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Image Area (mimicking the mobile top half) -->
+      <div class="relative bg-[#F8FAFC] rounded-3xl p-8 sm:p-12 border border-gray-100 flex justify-center items-center mb-8">
+        <!-- Back Button (overlay) -->
+        <a href="templates.html" class="absolute top-4 left-4 bg-white/80 backdrop-blur shadow-sm text-gray-700 w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-50 hover:shadow-md transition-all z-10">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        
+        <!-- The Paper Image -->
+        <div class="w-full max-w-sm bg-white rounded-[8px] shadow-[0_8px_30px_rgba(0,0,0,0.12)] overflow-hidden">
+          <img id="td-img" src="" alt="Template Preview" class="w-full h-auto object-contain" />
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="flex flex-col">
+        <!-- Badges row -->
+        <div class="flex items-center gap-3 mb-4">
+          <span id="td-category" class="text-[14px] font-semibold text-gray-700 font-['Inter']"></span>
+          <div id="td-ats"></div>
+        </div>
+        
+        <!-- Title -->
+        <h1 id="td-title" class="text-3xl sm:text-4xl font-bold text-[#1A1C1E] mb-4 tracking-tight font-['Plus_Jakarta_Sans']"></h1>
+        
+        <!-- Description -->
+        <p id="td-desc" class="text-[16px] text-gray-600 leading-relaxed mb-8 font-['Inter']"></p>
+
+        <!-- Pricing details (for web, replacing Use This Template if Premium) -->
+        <div id="td-price" class="mb-8"></div>
+
+        <!-- Call to Action -->
+        <a id="td-cta" href="https://play.google.com/store/apps/details?id=com.empire.product.nexcv.nexcv" target="_blank" class="bg-gradient-to-r from-blue-500 to-blue-600 text-white text-center text-lg font-semibold py-4 px-8 rounded-2xl shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 transition-all duration-200 block w-full flex justify-center items-center gap-2">
+          <i class="fa-solid fa-file-lines"></i> Use This Template
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <a href="index.html#home" class="footer-logo">
+          <img src="./assets/images/logo/logo.png"
+               alt="NextCV – AI Resume Builder app icon"
+               class="logo-img"
+               width="36" height="36"
+               loading="lazy"
+               decoding="async" />
+          Next<span class="logo-accent">CV</span>
+        </a>
+        <p class="footer-tagline">Create Professional ATS-Friendly<br>Resumes in Minutes.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="LinkedIn"  class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"  class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="templates.html">Templates</a></li>
+          <li><a href="index.html#screenshots">Screenshots</a></li>
+          <li><a href="ats-score.html">ATS Score Guide</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Legal</h4>
+        <ul class="footer-links" role="list">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="privacy.html#cookies">Cookie Policy</a></li>
+          <li><a href="refund.html">Refund Policy</a></li>
+          <li><a href="delete-account.html">Delete Account</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Contact</h4>
+        <div class="footer-contact-info">
+          <p><i class="fa-solid fa-envelope"></i>
+            <a href="mailto:support@nextcvbuilder.online">support@nextcvbuilder.online</a>
+          </p>
+          <p><i class="fa-solid fa-globe"></i> nextcvbuilder.online</p>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.empire.product.nexcv.nexcv" target="_blank" rel="noopener noreferrer"
+           class="gplay-badge-link footer-dl-btn">
+          <img src="assets/images/google-play-badge.svg" alt="Get it on Google Play" class="gplay-badge" loading="lazy" />
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 NextCV. All Rights Reserved. Built by Empire Softtech.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back-to-top -->
+  <button class="back-to-top" id="backToTop" aria-label="Scroll to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
