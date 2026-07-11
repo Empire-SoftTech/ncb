@@ -19,6 +19,13 @@
 
   <!-- Fonts & CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Disable Tailwind's own .container utility — it collides with this
+    // site's custom .container class (assets/css/style.css) at the
+    // 1536px breakpoint, widening the header/footer past their intended
+    // 1200px max-width and shrinking the visible side padding.
+    tailwind.config = { corePlugins: { container: false } };
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
