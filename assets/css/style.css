@@ -184,11 +184,57 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   width: auto;
 }
 /* Nav: slightly smaller */
-.nav__cta.gplay-badge-link .gplay-badge { height: 38px; }
+.nav__cta.gplay-badge-link .gplay-badge,
+.nav__cta.appstore-soon .gplay-badge { height: 38px; }
 /* Footer: standard */
 .footer-dl-btn.gplay-badge-link .gplay-badge { height: 44px; }
 /* Hero / CTA sections: larger */
 .gplay-badge-link.gplay-badge-lg .gplay-badge { height: 54px; }
+
+/* ── App Store badge — "Coming Soon" ──────────────────────────────
+   Deliberately a <span>, not an <a>: the iOS app isn't published, so
+   there's nothing to link to and a dead href would be a broken link for
+   users and crawlers alike. The Apple badge artwork is rendered
+   unmodified (no recolour, no distortion) per Apple's marketing
+   guidelines — the status is conveyed by the adjacent tag and a slight
+   dimming of the wrapper only.                                        */
+.appstore-soon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: default;
+  opacity: .72;
+}
+.appstore-soon .gplay-badge { height: 44px; width: auto; display: block; }
+.appstore-soon.gplay-badge-lg .gplay-badge { height: 54px; }
+.appstore-soon.footer-dl-btn,
+.gplay-badge-link.footer-dl-btn { padding: 0; background: none; border: none; }
+
+.soon-tag {
+  position: absolute;
+  top: -9px;
+  right: -10px;
+  background: #2563EB;
+  color: #fff;
+  font-size: .625rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,.25);
+}
+
+/* Store badges sit side by side and wrap together as a unit. */
+.store-badges,
+.footer-dl-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
 
 .btn-outline-white {
   background: transparent;
@@ -384,7 +430,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero-trust {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 .trust-item {
@@ -394,6 +440,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: rgba(255,255,255,.7);
   font-size: .875rem;
   font-weight: 500;
+  /* Keeps each badge intact — without this a long label breaks mid-phrase
+     and strands its divider on the previous line. */
+  white-space: nowrap;
 }
 .trust-stars { color: #FBBF24; display: flex; gap: 2px; font-size: .75rem; }
 .trust-divider { width: 1px; height: 18px; background: rgba(255,255,255,.2); }
@@ -1965,6 +2014,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: .8125rem;
   color: rgba(255,255,255,.35);
 }
+/* Corporate ownership disclaimer — sits under the copyright line on every
+   page, deliberately quieter than it so the copyright stays primary. */
+.footer-bottom .footer-legal {
+  font-size: .75rem;
+  color: rgba(255,255,255,.28);
+  margin-top: 6px;
+}
 
 /* ═════════════════════════════════════════════════════════
    BACK TO TOP
@@ -2086,6 +2142,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ── Small mobile (≤480px) ── */
+/* The three trust badges need ~526px on one line. Between the 480px column
+   breakpoint and that width they wrapped to two rows and stranded a
+   divider, so they stack here instead of breaking untidily. */
+@media (max-width: 560px) {
+  .hero-trust { flex-direction: column; gap: 8px; }
+  .trust-divider { display: none; }
+}
+
 @media (max-width: 480px) {
   .hero-title { font-size: 1.875rem; }
   .hero-actions { flex-direction: column; }
