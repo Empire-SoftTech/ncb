@@ -4,10 +4,42 @@
 
   <url>
     <loc>https://nextcvbuilder.online/</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/templates.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/templates.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/ats-resume-generator.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/ats-resume-generator.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/free-ai-resume-generator.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/free-ai-resume-generator.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/resume-maker-online.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/resume-maker-online.html"/>
   </url>
 
   <url>
@@ -16,6 +48,238 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/ats-score.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/ats-pro-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/ats-pro-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/executive-classic-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/executive-classic-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/nova-dark-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/nova-dark-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/ink-type-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/ink-type-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/pure-white-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/pure-white-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/campus-placement-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/campus-placement-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/software-engineer-ats-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/software-engineer-ats-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/skills-based-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/skills-based-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/graduate-researcher-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/graduate-researcher-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/ats-minimal-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/ats-minimal-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/corporate-blue-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/corporate-blue-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/legal-compliance-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/legal-compliance-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/veteran-transition-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/veteran-transition-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/education-teaching-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/education-teaching-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/gradient-edge-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/gradient-edge-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/sidebar-pro-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/sidebar-pro-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/portfolio-showcase-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/portfolio-showcase-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/design-portfolio-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/design-portfolio-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/sage-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/sage-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/graduate-ats-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/graduate-ats-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/transfer-student-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/transfer-student-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/undergraduate-classic-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/undergraduate-classic-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/early-student-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/early-student-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/student-athlete-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/student-athlete-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/leadership-involvement-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/leadership-involvement-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/technical-professional-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/technical-professional-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/competency-groups-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/competency-groups-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/research-cv-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/research-cv-resume-template.html"/>
+  </url>
+
+  <url>
+    <loc>https://nextcvbuilder.online/academic-cv-resume-template.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/academic-cv-resume-template.html"/>
   </url>
 
   <url>
@@ -35,14 +299,6 @@
   </url>
 
   <url>
-    <loc>https://nextcvbuilder.online/delete-account.html</loc>
-    <lastmod>2026-06-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/delete-account.html"/>
-  </url>
-
-  <url>
     <loc>https://nextcvbuilder.online/refund.html</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>yearly</changefreq>
@@ -51,27 +307,11 @@
   </url>
 
   <url>
-    <loc>https://nextcvbuilder.online/ats-resume-generator.html</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/ats-resume-generator.html"/>
-  </url>
-
-  <url>
-    <loc>https://nextcvbuilder.online/free-ai-resume-generator.html</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/free-ai-resume-generator.html"/>
-  </url>
-
-  <url>
-    <loc>https://nextcvbuilder.online/resume-maker-online.html</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/resume-maker-online.html"/>
+    <loc>https://nextcvbuilder.online/delete-account.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextcvbuilder.online/delete-account.html"/>
   </url>
 
 </urlset>

@@ -2166,3 +2166,48 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .cta-section { padding-block: 32px; }
   .section { padding-block: 48px; }
 }
+
+/* ═════════════════════════════════════════════════════════
+   STATIC TEMPLATE INDEX (templates.html)
+   Crawlable list of every per-template page, below the JS gallery.
+   ═════════════════════════════════════════════════════════ */
+.tpl-index {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid #E2E8F0;
+}
+.tpl-index h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 8px;
+}
+.tpl-index-intro { color: #64748B; line-height: 1.7; margin-bottom: 28px; max-width: 70ch; }
+.tpl-index-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px 32px;
+}
+.tpl-index-group h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: .9375rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 10px;
+}
+.tpl-index-group ul { list-style: none; padding: 0; margin: 0; }
+.tpl-index-group li { margin-bottom: 7px; }
+.tpl-index-group a {
+  color: #475569;
+  text-decoration: none;
+  font-size: .875rem;
+  line-height: 1.5;
+}
+.tpl-index-group a:hover { color: #2563EB; text-decoration: underline; }
+
+@media (max-width: 480px) {
+  .tpl-index { margin-top: 40px; padding-top: 28px; }
+  .tpl-index h2 { font-size: 1.25rem; }
+  .tpl-index-grid { gap: 24px; }
+}

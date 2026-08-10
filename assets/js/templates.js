@@ -21,6 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+/**
+ * URL of a template's static landing page.
+ *
+ * Cards used to point at `template.html?id=<id>` — a JS-rendered shell, so
+ * every template shared one URL and the HTML a crawler saw first was just a
+ * spinner. Each template now has its own pre-rendered page; the slug is
+ * derived from the title, which is identical in templates_data.js and the
+ * app's seed data (verified for all 29).
+ */
+function templateUrl(t) {
+    const slug = String(t.title || '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
+    return slug ? `${slug}-resume-template.html` : `template.html?id=${t.id}`;
+}
+
 function formatCategory(category) {
     if (!category) return 'Professional';
     const map = {
@@ -1604,7 +1621,7 @@ function renderGallery(templates) {
         const catName = formatCategory(t.category);
 
         const card = `
-            <a href="template.html?id=${t.id}" class="group bg-white rounded-[24px] border border-gray-100 overflow-hidden flex flex-col hover:-translate-y-0.5 transition-transform duration-200" style="box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+            <a href="${templateUrl(t)}" class="group bg-white rounded-[24px] border border-gray-100 overflow-hidden flex flex-col hover:-translate-y-0.5 transition-transform duration-200" style="box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
                 <!-- Preview Image Area -->
                 <div class="relative w-full aspect-[1/1.4] bg-[#F8FAFC] p-3 pb-0 rounded-t-[23px] flex items-end justify-center overflow-hidden">
                     <!-- The Resume Paper -->
@@ -1667,7 +1684,7 @@ function buildSlideCardHtml(t) {
 
     return `
         <div class="slide">
-            <a href="template.html?id=${t.id}" class="tmpl-slide-card reveal">
+            <a href="${templateUrl(t)}" class="tmpl-slide-card reveal">
                 <div class="tmpl-slide-thumb">
                     <img src="${imgUrl}" alt="${t.title} resume template" loading="lazy" />
                     ${atsBadge}
