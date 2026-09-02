@@ -433,6 +433,20 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 16px;
   flex-wrap: wrap;
 }
+
+/* Product Hunt badge — official embed artwork at its native 250x54 aspect
+   ratio, so width scales with height rather than the fixed-height sizing
+   used for the app-store badges above. */
+.ph-badge-link {
+  display: inline-flex;
+  margin-top: 16px;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.ph-badge-link:hover { opacity: 0.88; transform: translateY(-2px); }
+.ph-badge-link img { height: 54px; width: auto; display: block; }
+@media (max-width: 480px) {
+  .ph-badge-link img { height: 46px; }
+}
 .trust-item {
   display: flex;
   align-items: center;
