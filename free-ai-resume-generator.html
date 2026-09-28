@@ -178,11 +178,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
 </head>
-<body>
+<body class="page-home">
 
   <!-- ═══════════════════════════ HEADER ═══════════════════════════ -->
-  <header class="header" id="header">
+  <header class="header header--copilot" id="header">
     <nav class="nav container">
       <a href="#home" class="nav__logo">
         <img src="./assets/images/logo/logo.png"
@@ -196,7 +197,7 @@
 
       <ul class="nav__menu" id="navMenu" role="list">
         <li><a href="#home"        class="nav__link">Home</a></li>
-        <li><a href="#features"    class="nav__link">Features</a></li>
+        <li><a href="#features"    class="nav__link">AI Tools</a></li>
         <li><a href="#templates"   class="nav__link">Templates</a></li>
         <li><a href="blog.html"              class="nav__link">Guides</a></li>
         <li><a href="#screenshots" class="nav__link">Screenshots</a></li>
@@ -224,7 +225,7 @@
   <main>
 
     <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
-    <section class="hero" id="home" aria-label="Hero section">
+    <section class="hero hero--copilot" id="home" aria-label="Hero section">
       <div class="hero-shapes" aria-hidden="true">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
@@ -238,12 +239,12 @@
         <div class="hero-content">
           <div class="hero-badge">
             <i class="fa-solid fa-wand-magic-sparkles"></i>
-            AI-Powered Resume Builder
+            AI Resume Generator
           </div>
 
           <h1 class="hero-title">
             Free AI Resume Generator
-            <span class="gradient-text">That Gets You Hired</span>
+            <span class="gradient-text gradient-text--copilot">That Gets You Hired</span>
           </h1>
 
           <p class="hero-desc">
@@ -283,92 +284,116 @@
           </div>
         </div>
 
-        <!-- Right: phone mockup -->
+        <!-- Right: phone mockup + AI generation panel -->
         <div class="hero-mockup" aria-hidden="true">
-          <div class="phone-wrap">
-            <div class="phone-frame">
-              <div class="phone-notch"></div>
-              <div class="phone-screen">
-                <!-- simulated dashboard UI -->
-                <div class="mock-app">
-                  <div class="mock-topbar">
-                    <div class="mock-avatar-circle">A</div>
-                    <div class="mock-greeting">
-                      <div class="mock-bar mock-bar-md"></div>
-                      <div class="mock-bar mock-bar-sm mock-bar-blue"></div>
-                    </div>
-                    <div class="mock-ats-badge">ATS 92%</div>
-                  </div>
+          <div class="hero-mockup-stack">
 
-                  <div class="mock-hero-card">
-                    <div class="mock-card-label">Active Resume</div>
-                    <div class="mock-bar mock-bar-lg mock-bar-white"></div>
-                    <div class="mock-bar mock-bar-md mock-bar-light"></div>
-                    <div class="mock-tags">
-                      <span class="mock-tag">PDF</span>
-                      <span class="mock-tag">ATS</span>
-                      <span class="mock-tag mock-tag-ai"><i class="fa-solid fa-wand-magic-sparkles"></i> AI</span>
-                    </div>
-                  </div>
+            <!-- AI scan panel: illustrates the real AI generation + ATS
+                 analysis flow (not a fabricated capability). -->
+            <div class="ai-scan-card">
+              <div class="ai-scan-head"><i class="fa-solid fa-wand-magic-sparkles"></i> NextCV AI</div>
+              <div class="ai-scan-role">What are you applying for?
+                <strong>Software Engineer</strong>
+              </div>
+              <div class="ai-scan-divider"></div>
+              <div class="ai-scan-status"><span class="ai-scan-dot"></span> Generating your resume…</div>
+              <div class="ai-scan-checks">
+                <div class="ai-scan-check"><i class="fa-solid fa-circle-check"></i> Summary generated</div>
+                <div class="ai-scan-check"><i class="fa-solid fa-circle-check"></i> Experience rewritten</div>
+                <div class="ai-scan-check"><i class="fa-solid fa-circle-check"></i> Keywords matched</div>
+                <div class="ai-scan-check"><i class="fa-solid fa-circle-check"></i> ATS issues fixed</div>
+              </div>
+              <div class="ai-scan-match-label"><span>ATS Match</span><span>92%</span></div>
+              <div class="ai-scan-track"><div class="ai-scan-fill"></div></div>
+              <div class="ai-scan-btn">Generate Resume</div>
+            </div>
 
-                  <div class="mock-section-title">My Resumes</div>
-
-                  <div class="mock-list">
-                    <div class="mock-item">
-                      <div class="mock-item-icon"><i class="fa-solid fa-file-lines"></i></div>
-                      <div class="mock-item-body">
+            <div class="phone-wrap">
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                  <!-- simulated dashboard UI -->
+                  <div class="mock-app">
+                    <div class="mock-topbar">
+                      <div class="mock-avatar-circle">A</div>
+                      <div class="mock-greeting">
                         <div class="mock-bar mock-bar-md"></div>
-                        <div class="mock-bar mock-bar-sm mock-bar-gray"></div>
+                        <div class="mock-bar mock-bar-sm mock-bar-blue"></div>
                       </div>
-                      <div class="mock-score mock-score-high">92</div>
+                      <div class="mock-ats-badge">ATS 92%</div>
                     </div>
-                    <div class="mock-item">
-                      <div class="mock-item-icon mock-item-icon-purple"><i class="fa-solid fa-file-lines"></i></div>
-                      <div class="mock-item-body">
-                        <div class="mock-bar mock-bar-md"></div>
-                        <div class="mock-bar mock-bar-sm mock-bar-gray"></div>
-                      </div>
-                      <div class="mock-score mock-score-med">78</div>
-                    </div>
-                    <div class="mock-item">
-                      <div class="mock-item-icon mock-item-icon-orange"><i class="fa-solid fa-file-lines"></i></div>
-                      <div class="mock-item-body">
-                        <div class="mock-bar mock-bar-md"></div>
-                        <div class="mock-bar mock-bar-sm mock-bar-gray"></div>
-                      </div>
-                      <div class="mock-score mock-score-low">65</div>
-                    </div>
-                  </div>
 
-                  <div class="mock-fab"><i class="fa-solid fa-plus"></i></div>
+                    <div class="mock-hero-card">
+                      <div class="mock-card-label">Active Resume</div>
+                      <div class="mock-bar mock-bar-lg mock-bar-white"></div>
+                      <div class="mock-bar mock-bar-md mock-bar-light"></div>
+                      <div class="mock-tags">
+                        <span class="mock-tag">PDF</span>
+                        <span class="mock-tag">ATS</span>
+                        <span class="mock-tag mock-tag-ai"><i class="fa-solid fa-wand-magic-sparkles"></i> AI</span>
+                      </div>
+                    </div>
+
+                    <div class="mock-section-title">My Resumes</div>
+
+                    <div class="mock-list">
+                      <div class="mock-item">
+                        <div class="mock-item-icon"><i class="fa-solid fa-file-lines"></i></div>
+                        <div class="mock-item-body">
+                          <div class="mock-bar mock-bar-md"></div>
+                          <div class="mock-bar mock-bar-sm mock-bar-gray"></div>
+                        </div>
+                        <div class="mock-score mock-score-high">92</div>
+                      </div>
+                      <div class="mock-item">
+                        <div class="mock-item-icon mock-item-icon-purple"><i class="fa-solid fa-file-lines"></i></div>
+                        <div class="mock-item-body">
+                          <div class="mock-bar mock-bar-md"></div>
+                          <div class="mock-bar mock-bar-sm mock-bar-gray"></div>
+                        </div>
+                        <div class="mock-score mock-score-med">78</div>
+                      </div>
+                      <div class="mock-item">
+                        <div class="mock-item-icon mock-item-icon-orange"><i class="fa-solid fa-file-lines"></i></div>
+                        <div class="mock-item-body">
+                          <div class="mock-bar mock-bar-md"></div>
+                          <div class="mock-bar mock-bar-sm mock-bar-gray"></div>
+                        </div>
+                        <div class="mock-score mock-score-low">65</div>
+                      </div>
+                    </div>
+
+                    <div class="mock-fab"><i class="fa-solid fa-plus"></i></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- floating chips -->
+              <div class="float-chip float-chip-ats">
+                <div class="float-icon float-icon-green"><i class="fa-solid fa-chart-line"></i></div>
+                <div>
+                  <div class="float-label">ATS Score</div>
+                  <div class="float-value">92%</div>
+                </div>
+              </div>
+
+              <div class="float-chip float-chip-ai">
+                <div class="float-icon float-icon-blue"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div>
+                  <div class="float-label">AI Suggestions</div>
+                  <div class="float-value">Active</div>
+                </div>
+              </div>
+
+              <div class="float-chip float-chip-pdf">
+                <div class="float-icon float-icon-red"><i class="fa-solid fa-file-pdf"></i></div>
+                <div>
+                  <div class="float-label">PDF Export</div>
+                  <div class="float-value">Instant</div>
                 </div>
               </div>
             </div>
 
-            <!-- floating chips -->
-            <div class="float-chip float-chip-ats">
-              <div class="float-icon float-icon-green"><i class="fa-solid fa-chart-line"></i></div>
-              <div>
-                <div class="float-label">ATS Score</div>
-                <div class="float-value">92%</div>
-              </div>
-            </div>
-
-            <div class="float-chip float-chip-ai">
-              <div class="float-icon float-icon-blue"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-              <div>
-                <div class="float-label">AI Suggestions</div>
-                <div class="float-value">Active</div>
-              </div>
-            </div>
-
-            <div class="float-chip float-chip-pdf">
-              <div class="float-icon float-icon-red"><i class="fa-solid fa-file-pdf"></i></div>
-              <div>
-                <div class="float-label">PDF Export</div>
-                <div class="float-value">Instant</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -380,88 +405,98 @@
 
     <!-- ═══════════════════════════ STATS ═══════════════════════════ -->
     <section class="stats-section" aria-label="Statistics">
-      <div class="container stats-grid">
-        <div class="stat-item">
-          <div class="stat-number" data-target="29" data-suffix="+">0</div>
-          <div class="stat-label">Resume Templates</div>
+      <div class="container">
+        <div class="trust-strip">
+          <div class="trust-strip-title">Built for modern job seekers</div>
+          <div class="trust-pills">
+            <span class="trust-pill">AI Resume Generator</span>
+            <span class="trust-pill">AI Optimization</span>
+            <span class="trust-pill">ATS Score</span>
+          </div>
         </div>
-        <div class="stat-item">
-          <div class="stat-number" data-target="20" data-suffix="+">0</div>
-          <div class="stat-label">Premium ATS Templates</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number" data-target="6" data-suffix="">0</div>
-          <div class="stat-label">AI-Assisted Sections</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number" data-target="100" data-suffix="%">0</div>
-          <div class="stat-label">Offline ATS Analysis</div>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number" data-target="29" data-suffix="+">0</div>
+            <div class="stat-label">Resume Templates</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="20" data-suffix="+">0</div>
+            <div class="stat-label">Premium ATS Templates</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="6" data-suffix="">0</div>
+            <div class="stat-label">AI-Assisted Sections</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="100" data-suffix="%">0</div>
+            <div class="stat-label">Offline ATS Analysis</div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ═══════════════════════════ FEATURES ═══════════════════════════ -->
-    <section class="features-section section" id="features" aria-label="Features">
+    <section class="features-section features-section--copilot section" id="features" aria-label="Features">
       <div class="container">
         <div class="section-head">
-          <span class="section-tag">Features</span>
+          <span class="section-tag section-tag--copilot">AI Resume Generator</span>
           <h2 class="section-title">Everything You Need to Land Your Dream Job</h2>
           <p class="section-sub">NextCV combines AI intelligence with professional design to give
           you every tool needed for a standout resume.</p>
         </div>
 
-        <div class="features-grid">
-          <article class="feature-card reveal">
-            <div class="feat-icon feat-icon-blue"><i class="fa-solid fa-robot"></i></div>
+        <div class="bento-grid">
+          <article class="bento-card bento-card--lg bento-card--dark reveal">
+            <div class="bento-icon"><i class="fa-solid fa-robot"></i></div>
             <h3>ATS-Friendly Builder</h3>
             <p>Create resumes that pass Applicant Tracking Systems with structured
             formatting and recruiter-approved layouts.</p>
           </article>
 
-          <article class="feature-card reveal">
-            <div class="feat-icon feat-icon-purple"><i class="fa-solid fa-palette"></i></div>
+          <article class="bento-card reveal">
+            <div class="bento-icon bento-icon--outline"><i class="fa-solid fa-palette"></i></div>
             <h3>Professional Templates</h3>
             <p>Choose from multiple recruiter-approved templates designed to impress
             hiring managers across all industries.</p>
           </article>
 
-          <article class="feature-card reveal">
-            <div class="feat-icon feat-icon-green"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <article class="bento-card reveal">
+            <div class="bento-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
             <h3>AI-Powered Suggestions</h3>
             <p>Generate compelling professional summaries and experience descriptions
             with intelligent AI assistance.</p>
           </article>
 
-          <article class="feature-card reveal">
-            <div class="feat-icon feat-icon-red"><i class="fa-solid fa-file-pdf"></i></div>
+          <article class="bento-card reveal">
+            <div class="bento-icon bento-icon--outline"><i class="fa-solid fa-file-pdf"></i></div>
             <h3>Instant PDF Export</h3>
             <p>Download high-quality, print-ready PDF resumes in seconds — no waiting,
             no watermarks, no limits.</p>
           </article>
 
-          <article class="feature-card reveal">
-            <div class="feat-icon feat-icon-orange"><i class="fa-solid fa-eye"></i></div>
+          <article class="bento-card reveal">
+            <div class="bento-icon bento-icon--outline"><i class="fa-solid fa-eye"></i></div>
             <h3>Resume Preview</h3>
             <p>See exactly how your resume looks before exporting — what you see is
             precisely what recruiters receive.</p>
           </article>
 
-          <article class="feature-card reveal">
-            <div class="feat-icon feat-icon-teal"><i class="fa-solid fa-layer-group"></i></div>
+          <article class="bento-card reveal">
+            <div class="bento-icon bento-icon--teal"><i class="fa-solid fa-layer-group"></i></div>
             <h3>Multiple Resumes</h3>
             <p>Create and manage multiple tailored resumes for different job roles,
             companies, and industries.</p>
           </article>
 
-          <article class="feature-card reveal">
-            <div class="feat-icon feat-icon-blue"><i class="fa-solid fa-cloud"></i></div>
+          <article class="bento-card reveal">
+            <div class="bento-icon bento-icon--outline"><i class="fa-solid fa-cloud"></i></div>
             <h3>Cloud Backup</h3>
             <p>Your resumes are securely backed up and accessible from any device,
             any time, anywhere in the world.</p>
           </article>
 
-          <article class="feature-card reveal">
-            <div class="feat-icon feat-icon-purple"><i class="fa-solid fa-pen-to-square"></i></div>
+          <article class="bento-card reveal">
+            <div class="bento-icon bento-icon--outline"><i class="fa-solid fa-pen-to-square"></i></div>
             <h3>Easy Editing</h3>
             <p>Update your resume anytime with a simple, intuitive interface built
             specifically for mobile-first use.</p>
@@ -474,12 +509,12 @@
     <section class="how-section section" id="how" aria-label="How it works">
       <div class="container">
         <div class="section-head">
-          <span class="section-tag">Process</span>
+          <span class="section-tag section-tag--copilot">Process</span>
           <h2 class="section-title">Get Your Resume Ready in 4 Simple Steps</h2>
           <p class="section-sub">From blank page to hired — in minutes.</p>
         </div>
 
-        <div class="steps-row">
+        <div class="steps-row steps-row--copilot">
           <article class="step-card reveal">
             <div class="step-num">01</div>
             <div class="step-icon"><i class="fa-solid fa-user-plus"></i></div>
@@ -522,7 +557,7 @@
       <div class="container ats-inner">
 
         <div class="ats-content reveal">
-          <span class="section-tag">ATS Intelligence</span>
+          <span class="section-tag section-tag--copilot">ATS Intelligence</span>
           <h2 class="section-title">Beat ATS Filters and Increase Interview Chances</h2>
           <p>Over 75% of resumes are rejected by Applicant Tracking Systems before a human
           ever reads them. NextCV builds resumes with structured formatting, keyword
@@ -595,7 +630,7 @@
                 <span>88%</span>
               </div>
               <div class="ats-bar-row">
-                <span>Completeness</span>
+                <span>Skills Match</span>
                 <div class="ats-bar-track"><div class="ats-bar-fill" style="--w:90%"></div></div>
                 <span>90%</span>
               </div>
@@ -610,7 +645,7 @@
     <section class="templates-section section" id="templates" aria-label="Resume Templates">
       <div class="container">
         <div class="section-head">
-          <span class="section-tag">Templates</span>
+          <span class="section-tag section-tag--copilot">Templates</span>
           <h2 class="section-title">Professional Resume Templates</h2>
           <p class="section-sub">Handcrafted by career experts. Optimized for ATS. Ready to impress.</p>
         </div>
@@ -645,7 +680,7 @@
     <section class="screenshots-section section" id="screenshots" aria-label="App Screenshots">
       <div class="container">
         <div class="section-head">
-          <span class="section-tag">App Preview</span>
+          <span class="section-tag section-tag--copilot">App Preview</span>
           <h2 class="section-title">See NextCV in Action</h2>
           <p class="section-sub">Clean, intuitive, and designed for speed. Build your resume in minutes.</p>
         </div>
@@ -779,7 +814,7 @@
     <section class="compare-section section" aria-label="Feature comparison">
       <div class="container">
         <div class="section-head">
-          <span class="section-tag">Why NextCV</span>
+          <span class="section-tag section-tag--copilot">Why NextCV</span>
           <h2 class="section-title">See How NextCV Compares</h2>
           <p class="section-sub">Built for modern job seekers. Designed to win.</p>
         </div>
@@ -837,77 +872,36 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════ TESTIMONIALS ═══════════════════════════ -->
-    <section class="testimonials-section section" aria-label="Testimonials">
+    <!-- ═══════════════════════════ VALUE PROPS ═══════════════════════════ -->
+    <section class="value-props-section section" aria-label="Why NextCV">
       <div class="container">
         <div class="section-head">
-          <span class="section-tag">Testimonials</span>
-          <h2 class="section-title">Loved by Job Seekers Worldwide</h2>
-          <p class="section-sub">Real stories from real people who landed their dream jobs with NextCV.</p>
+          <span class="section-tag section-tag--copilot">Why Job Seekers Choose NextCV</span>
+          <h2 class="section-title">Built to Get You Hired, Not Just to Look Nice</h2>
+          <p class="section-sub">No fluff — just the AI tools that matter when you're applying.</p>
         </div>
 
-        <div class="testimonials-grid">
-
-          <article class="testi-card reveal">
-            <div class="testi-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <blockquote>
-              "NextCV helped me create a professional resume and land interviews within weeks.
-              The ATS optimization is a game-changer — I went from zero callbacks to
-              5 interviews in two weeks!"
-            </blockquote>
-            <div class="testi-author">
-              <div class="testi-avatar testi-av-1">AK</div>
-              <div class="testi-info">
-                <strong>Arjun Kumar</strong>
-                <span>Software Engineer at TechCorp</span>
-              </div>
-            </div>
+        <div class="value-props-grid">
+          <article class="value-card reveal">
+            <div class="value-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h3>Built Mobile-First</h3>
+            <p>Generate, edit, and export your resume entirely from your phone.
+            No desktop required.</p>
           </article>
 
-          <article class="testi-card reveal">
-            <div class="testi-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <blockquote>
-              "As a fresh graduate I had no idea how to write a good resume. NextCV's
-              step-by-step builder and AI suggestions made it so easy. The ATS-friendly
-              templates made my resume stand out from hundreds of applicants."
-            </blockquote>
-            <div class="testi-author">
-              <div class="testi-avatar testi-av-2">PS</div>
-              <div class="testi-info">
-                <strong>Priya Sharma</strong>
-                <span>Marketing Graduate</span>
-              </div>
-            </div>
+          <article class="value-card reveal">
+            <div class="value-icon"><i class="fa-solid fa-lock"></i></div>
+            <h3>Privacy by Design</h3>
+            <p>Your data is encrypted in transit and at rest. Delete your account and all
+            your data at any time from within the app.</p>
           </article>
 
-          <article class="testi-card reveal">
-            <div class="testi-stars">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-regular fa-star-half-stroke"></i>
-            </div>
-            <blockquote>
-              "I'm a busy professional who needs to update my resume quickly. NextCV is
-              incredibly easy to use — perfect for creating multiple tailored resumes for
-              different applications without spending hours on formatting."
-            </blockquote>
-            <div class="testi-author">
-              <div class="testi-avatar testi-av-3">RM</div>
-              <div class="testi-info">
-                <strong>Rahul Mehta</strong>
-                <span>Senior Project Manager</span>
-              </div>
-            </div>
+          <article class="value-card reveal">
+            <div class="value-icon"><i class="fa-solid fa-file-pdf"></i></div>
+            <h3>No Watermarks, Ever</h3>
+            <p>Every generated resume exports as a clean, print-ready PDF. What you
+            build is exactly what you send.</p>
           </article>
-
         </div>
       </div>
     </section>
@@ -916,7 +910,7 @@
     <section class="faq-section section" id="faq" aria-label="FAQ">
       <div class="container">
         <div class="section-head">
-          <span class="section-tag">FAQ</span>
+          <span class="section-tag section-tag--copilot">FAQ</span>
           <h2 class="section-title">Frequently Asked Questions</h2>
           <p class="section-sub">Everything you need to know about NextCV.</p>
         </div>
@@ -1007,12 +1001,12 @@
       </div>
       <div class="container cta-inner">
         <div class="cta-icon-badge">
-          <i class="fa-brands fa-google-play"></i>
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
         </div>
-        <h2 class="cta-title">Ready to Build Your Next Resume?</h2>
+        <h2 class="cta-title">Ready to Generate Your Resume with AI?</h2>
         <p class="cta-desc">
-          Join thousands of job seekers who have already created professional,
-          ATS-friendly resumes with NextCV — completely from their phone.
+          Let AI build a professional, ATS-friendly resume from your experience —
+          completely from your phone.
         </p>
         <div class="cta-btns">
           <a href="https://play.google.com/store/apps/details?id=com.empire.product.nexcv.nexcv" target="_blank" rel="noopener noreferrer"
